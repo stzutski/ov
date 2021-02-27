@@ -1,0 +1,8 @@
+.navbar{width:30%;float:left;background:#333;color:#fff;}
+.pagebody{width:70%;float:left;background:#f4f4f4;color:#000;}
+form{
+display:block;
+max-width: 300px;
+margin:0px auto;
+text-align:center;
+}
