@@ -1,0 +1,24 @@
+01/03/21 - 11:59:06 - conferindo permissoes (cliente),(admin)
+01/03/21 - 11:59:06 - erro de permissao (cliente),(admin)
+01/03/21 - 12:03:24 - redir configurado
+01/03/21 - 12:34:00 - conferindo permissoes (admin),(admin)
+01/03/21 - 12:34:00 - autorizando (admin),(admin)
+01/03/21 - 12:34:04 - conferindo permissoes (admin),(cliente)
+01/03/21 - 12:34:04 - erro de permissao (admin),(cliente)
+01/03/21 - 12:34:05 - redir configurado
+01/03/21 - 12:34:16 - conferindo permissoes (cliente),(cliente)
+01/03/21 - 12:34:16 - autorizando (cliente),(cliente)
+01/03/21 - 12:34:17 - conferindo permissoes (cliente),(cliente)
+01/03/21 - 12:34:17 - autorizando (cliente),(cliente)
+01/03/21 - 12:35:02 - conferindo permissoes (cliente),(admin)
+01/03/21 - 12:35:02 - erro de permissao (cliente),(admin)
+01/03/21 - 12:35:12 - redir configurado
+01/03/21 - 12:35:17 - conferindo permissoes (),(admin)
+01/03/21 - 12:35:17 - erro de permissao (),(admin)
+01/03/21 - 14:08:51 - redir configurado
+01/03/21 - 14:09:02 - conferindo permissoes (admin),(admin)
+01/03/21 - 14:09:02 - autorizando (admin),(admin)
+01/03/21 - 14:10:06 - conferindo permissoes (admin),(admin)
+01/03/21 - 14:10:06 - autorizando (admin),(admin)
+01/03/21 - 14:10:18 - conferindo permissoes (admin),(admin)
+01/03/21 - 14:10:18 - autorizando (admin),(admin)

@@ -1,10 +1,10 @@
-<?php include('views/headersAndFooters/master-header.php');?>
+<?php include('views/include-html/headers/master-header.php');?>
 
 
 
-<div class="navbar">
+<div class="navbar mainNav-master">
 
-<?php include('views/menus/master-menu-lateral.php');?>
+<?php include('views/include-html/menus/master-menu-lateral.php');?>
 
 </div>
 
@@ -32,4 +32,4 @@
 
 
 
-<?php include('views/headersAndFooters/master-footer.php');?>
+<?php include('views/include-html/footers/master-footer.php');?>

@@ -1,10 +1,27 @@
 <?php 
+//REGISTRA SESSAO
 session_start();
 
-// funcao que carrega as classes automaticamente
-spl_autoload_register(function ($class) {
-    require_once(str_replace('\\', '/', "php/classes/$class.php"));
-});
+//CONFIGURACOES GLOBAIS
+define('URLAPP','http://localhost/labs/ov/');
+
+if(isSet($_GET['u'])&&$_GET['u']=='logout'){
+    session_destroy();
+    session_start();
+    header('Location:'.URLAPP);
+}
+
+
+//FUNCOES DO APP
+require_once('php/functions/functions.php');
+require_once('php/functions/functions.html.php');
+
+if(!isSet($_SESSION['_uL'])){
+    $_SESSION['_uL']='';
+    header('location:'.URLAPP . '/logout');
+    logsys('redir configurado');
+    exit;
+}
 
 
 

@@ -1,8 +1,18 @@
-.navbar{width:30%;float:left;background:#333;color:#fff;}
-.pagebody{width:70%;float:left;background:#f4f4f4;color:#000;}
+.navbar{width:20%;float:left;background:#333;color:#fff;}
+.pagebody{width:80%;float:left;background:#f4f4f4;color:#000;}
 form{
 display:block;
 max-width: 300px;
 margin:0px auto;
 text-align:center;
 }
+ul.mainNav > li{
+line-height:30px;
+list-style:none;
+}
+
+.mainNav > li > a{color:#fff;}
+
+.mainNav-cliente{background:#3440FF;}
+.mainNav-admin{background:#A8000A;}
+.mainNav-master{background:#000000;}

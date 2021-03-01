@@ -1,8 +1,8 @@
-<?php include('views/headersAndFooters/admin-header.php');?>
+<?php include('views/include-html/headers/admin-header.php');?>
 
 
-<div class="navbar">
-<?php include('views/menus/admin-menu-lateral.php');?>
+<div class="navbar mainNav-admin">
+<?php include('views/include-html/menus/admin-menu-lateral.php');?>
 </div>
 
 
@@ -21,4 +21,4 @@
 </div>
 
 
-<?php include('views/headersAndFooters/admin-footer.php');?>
+<?php include('views/include-html/footers/admin-footer.php');?>

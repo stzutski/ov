@@ -1,10 +1,10 @@
-<?php include('views/headersAndFooters/client-header.php');?>
+<?php include('views/include-html/headers/client-header.php');?>
 
 
 
 <div class="navbar">
 
-<?php include('views/menus/client-menu-lateral.php');?>
+<?php include('views/include-html/menus/client-menu-lateral.php');?>
 
 </div>
 
@@ -24,4 +24,4 @@
 
 
 
-<?php include('views/headersAndFooters/client-footer.php');?>
+<?php include('views/include-html/footers/client-footer.php');?>
