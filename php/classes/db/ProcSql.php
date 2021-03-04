@@ -5,10 +5,10 @@
  * ACOES DE CADASTRO, UPDATE E LISTAGEM
  * */
 
-namespace php\classes\DB;
+namespace db;
 
-use \php\classes\DB\Sql;
-use \php\classes\model\Model;
+use db\Sql;
+use db\Model;
 
 class ProcSql extends Model {
 
@@ -86,6 +86,17 @@ class ProcSql extends Model {
     	if($table!=''){
         $queryStr   = "SELECT * FROM $table $orderBy";
         $res = $sql->select($queryStr);
+    	}
+    	return $res;
+    }
+
+    //getList('usuarios',' ORDER BY id_usuario')
+    public static function listaDados($table='',$exp='',$args=array()) {
+    	$sql = new Sql();
+    	$res = false;
+    	if($table!=''){
+        $queryStr   = "SELECT * FROM $table $exp";
+        $res = $sql->select($queryStr,$args);
     	}
     	return $res;
     }

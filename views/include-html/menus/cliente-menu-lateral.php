@@ -1,6 +1,7 @@
 <ul class="mainNav">
   <li><a href="">Dashboard</a></li>
   <li><a href="perfil-usuario">Meu Perfil</a></li>
+  <li><a href="categorias-servicos">Cat. Serviços</a></li>
   <li><a href="servicos-disponiveis">Serviços</a></li>
   <li><a href="servicos-detalhes/x">Det. Serv. X</a></li>
   <li><a href="servicos-contratados">Meus Serviços</a></li>

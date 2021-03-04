@@ -1,5 +1,6 @@
+*{padding:0px;margin:0px;}
 .navbar{width:20%;float:left;background:#333;color:#fff;}
-.pagebody{width:80%;float:left;background:#f4f4f4;color:#000;}
+.pagebody{width:80%;float:left;background:#f4f4f4;color:#000;padding:10px;}
 form{
 display:block;
 max-width: 300px;
@@ -16,3 +17,54 @@ list-style:none;
 .mainNav-cliente{background:#3440FF;}
 .mainNav-admin{background:#A8000A;}
 .mainNav-master{background:#000000;}
+
+.lista-cat-servicos{
+  display:table;
+  text-align:center;
+  min-width:754px;
+  max-width:504px;
+  height:164px;  
+  margin:0px auto;
+  border:1px #333 solid;
+}
+.lista-cat-servicos  > li{
+  list-style:none;
+  width:250px;
+  height:164px;
+  float:left;
+  border:1px #ccc solid;
+}
+.lista-cat-servicos  > li > a{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+
+
+
+
+.tb-carrinho{width:100%;}
+
+
+
+
+.ligrid{
+margin-left:20px!important;
+}
+.ligrid a{
+  color:inherit;
+}
+.ligrid h4{
+  color:#940000;
+}
+.ligrid h5{
+  color:#112AE7;
+}
+.ligrid a:hover{
+  color:#4875A8;
+}
+
+.mgl-20{
+margin-left:20px!important;
+}

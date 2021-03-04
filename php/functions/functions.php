@@ -5,12 +5,95 @@ spl_autoload_register(function ($class) {
 });
 
 
-//funcao para proteger areas restritas de acordo com o nivel de permissao
-function protege($userLevel,$required){
+
+function ulArr($array){
+
+  $tag="<ul>\n";
+    foreach ($array as $key => $value) {
+      $tag.="<li>";
+      if(is_array($value)){
+        $tag.=ulArr($value);
+      }else{
+        $tag.= "{$key}: $value";
+      }
+      $tag.="</li>\n";
+    }
+  $tag.="</ul>\n";
+  
+  return $tag;
+}
+
+
+
+//FUNCAO PARA LISTA TMP DE DADOS RETORNA UMA TAG UL COM OS VALORES DO ARRAY
+function listaForeach($arr=array(),$classCss=''){
+  $tag_ul          = false;
+  $tag_uls='';
+  $item_lista      =  "";
+  if($classCss!='')  {$classCss = ' class="'.$classCss.'" ';}
+  if(is_array($arr)){
+    for ($i = 0; $i < count($arr); $i++)
+    {
+      $item_lista    .=  "<ul".$classCss.">\n";
+      $item          = $arr[$i];
+      foreach ($item as $key => $value) {
+        $item_lista .= "<li>{$key} => {$value}</li>\n";
+      }
+      $item_lista   .= "</ul>\n";
+      //$item_lista   .= "<li><br /></li>\n";
+      $tag_ul        = $item_lista;
+    }
+  }
+  //return "<ul>$item_lista</ul>";
+  return $item_lista;
+}
+
+
+//FUNCAO ATALHO TRATAMENTO DE RETORNO DE ARRAYS DE DADOS
+function dbRet($db=array()){
+  $ret = false;
+  if(is_array($db)){
+    if(count($db)==1){
+      $ret = $db[0];
+    }
+    if(count($db)>1){
+      $ret = $db;
+    }
+  }
+  return $ret;
+}
+
+
+//FUNCAO TEMPORARIA PARA ENVIO DE EMAILs
+function mailTo($to='',$subject='',$message=''){
+  
+  if($to!=''&&$subject!=''&&$message!=''){
+
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+    $headers .= 'To: ' . $to . "\r\n";
+    $headers .= 'From: ' . MAILFROM . "\r\n";
+    $headers .= 'Reply-To: ' . MAILFROM . "\r\n";
+    $headers .= 'X-Mailer: PHP/ ' . phpversion();
+
+    if(!mail($to, $subject, $message, $headers)){
+      return false;
+    }else{
+      return true;
+    }
+  
+  }else{
+    return false;  
+  }
   
 }
 
 // helpers para vars
+function chkVar($varname){
+  if(isSet($varname)){return $varname;}
+  else
+  {return false;}
+}
 function getVar($varname){
   if(isSet($_GET[$varname])){if($_GET[$varname]=='' || $_GET[$varname]!=''){return $_GET[$varname];}}
   else
