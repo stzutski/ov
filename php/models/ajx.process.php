@@ -5,7 +5,7 @@ if(postVar('do')=='lostpwd'){
 }
 
 //rotina para conferir se email esta cadastrado
-if(postVar('do')=='chkmail'){
+if(postVar('do')=='chkmail' || postVar('go')=='chkmail'){
   include_once('php/models/site/checkmail.site.model.php');
 }
 

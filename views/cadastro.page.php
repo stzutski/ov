@@ -30,7 +30,10 @@
 	<input required="true" type="text" class="form-control" id="campoSobrenome" name="campoSobrenome" placeholder="Sobrenome">
 	</div>
 	<div class="form-group">
-	<input required="true" type="email" class="form-control" id="campoEmail" name="campoEmail" placeholder="Seu email">
+	<input required="true" type="email" class="form-control chkRegisterMail" id="campoEmail" name="campoEmail" placeholder="Seu email" data-go="<?php echo URLAPP . 'ajx'?>">
+  <small id="emlUsed" class="form-text text-danger" style="display:none;">O email já esta em uso.</small>
+  <small id="emlOk" class="form-text text-success" style="display:none;">O email ok.</small>
+  <small id="emlErr" class="form-text text-danger" style="display:none;">Não parece válido.</small>
 	</div>
 	<div class="form-group">
 	<input required="true" type="text" class="form-control" id="campoTelefone" name="campoTelefone" placeholder="Celular: ex: (00) 0000-0000">
