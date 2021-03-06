@@ -12,5 +12,12 @@
   <li><a href="suporte-chat">Suporte</a></li>
   <li><a href="suporte-videochat">Suporte Vídeo</a></li>
   <li><a href="suporte-ticket">Suporte Ticket</a></li>
+  <li>
+    <ul>
+      <li class="indent-20"><b>LINKS PARA TESTES</b></li>
+      <li class="indent-20"><a href="meus-arquivos">Meus Arquivos</a></li>
+    </ul>
+  </li>
+  <li><a href="recuperar-acesso">Suporte Ticket</a></li>
   <li><a href="<?php echo URLAPP;?>?u=logout">LOGOUT</a></li>
 </ul>

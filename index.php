@@ -41,19 +41,43 @@ $app = new \Slim\Slim();
     
   });
 
+  //LOGIN: FORMULARIO DE LOGIN
   $app->get('/login', function () {
       include 'views/login.page.php';
   });
 
-  //ERRO LOGIN
+  //LOGIN: ERRO DADOS INCORRETOS
   $app->get('/erro-login/:erro', function($erro) {
     include 'views/login.page.php';
   });
 
-  //CADASTRO
-  $app->get('/cadastro', function () {
-      include 'views/site/cadastro.php';
+  //RECUPERAR ACESSO: FORM RECUPERACAO
+  $app->get('/recuperar-acesso', function () {
+      include 'views/recuperar-acesso.page.php';
   });
+
+  //RECUPERAR ACESSO: STATUS RECUPERACAO
+  $app->get('/confirma-recuperacao/:codRecuperacao', function ($codRecuperacao) {
+      include_once('php/models/site/recuperar-senha.site.model.php');//CARREGA O MODEL DE RECUPERACAO
+      include 'views/recuperar-acesso-status.page.php';
+  });
+
+  //CADASTRO :: FORMULARIO DE CADASTRO
+  $app->get('/cadastro', function () {
+      include 'views/cadastro.page.php';
+  });
+
+  //CADASTRO :: AVISO DE CONFIRMACAO NECESSARIA
+  $app->get('/cadastro/confirmacao', function () {
+      include 'views/cadastro.aviso-confirmacao.page.php';
+  });
+
+  //CADASTRO :: RCBTO VIA GET DO LINK DE CONFIRMACAO
+  $app->get('/cadastro/confirmacao/:codigoConfirmacao', function ($codigoConfirmacao) {
+      include_once('php/models/site/confirma-cadastro.site.model.php');//CARREGA O MODEL DE CONFIRMACAO
+      include 'views/cadastro.aviso-confirmacao.page.php';
+  });
+
 
 
   require_once('rotas/cliente.routes.php');

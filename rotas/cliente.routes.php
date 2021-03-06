@@ -11,7 +11,8 @@
 
       App::chkPerm(decode( sessionVar('_uL') ),'cliente');
 
-      $incBody = RESTRITA_CLIENTE . 'forms/perfil.form.php';    
+      $incBody = RESTRITA_CLIENTE . 'forms/perfil.form.php';   
+      include_once ('php/models/cliente/profile.cliente.model.php');  
       include_once 'views/cliente.page.tpl.php';
     });
   

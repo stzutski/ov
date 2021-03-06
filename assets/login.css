@@ -1,0 +1,25 @@
+*{padding:0px;margin:0px;}
+.form-cadastro{
+	max-width:400px;
+	margin:60px auto 0px auto;
+}
+
+.form-link-confirmacao{
+	max-width:400px;
+	margin:60px auto 0px auto;
+  text-align:center;
+}
+.form-login{
+  padding: 30px;
+  border:1px #ccc solid;
+  border-radius:8px;
+	max-width:400px;
+	margin:60px auto 0px auto;
+  text-align:center;
+}
+.box-texto-home{
+  padding: 30px;
+  border:1px #ccc solid;
+  border-radius:8px;
+	max-width:400px;
+}

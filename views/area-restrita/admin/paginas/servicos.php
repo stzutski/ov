@@ -1,8 +1,15 @@
-lista de servicos333 (<?php echo $titulo;?>)
+lista de servicos333 (<?php echo $titulo_servicos;?>)
 
 <?php 
 
 //echo json_encode($listaServicos);
+
+
+
+
+
+
+
 
 if(count($listaServicos)>0){
 
@@ -10,8 +17,10 @@ if(count($listaServicos)>0){
   {
     echo "<hr />\n";
     $srv = $listaServicos[$i];
+    $nome_servico='';
     foreach ($srv as $key => $value) {
-      echo "{$key} => {$value}<br />";
+      if($key=='id_servico'){$nome_servico = $dbi_serv[$value]['nome_servico'];}else{$nome_servico='';}
+      echo "{$key} => {$value} ($nome_servico)<br />";
     }
     
   }

@@ -1,313 +1,38 @@
-03/03/21 - 18:33:05 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:33:05 - autorizando (cliente),(cliente)
-03/03/21 - 18:33:54 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:33:54 - autorizando (cliente),(cliente)
-03/03/21 - 18:33:54 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:35:02 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:35:02 - autorizando (cliente),(cliente)
-03/03/21 - 18:35:02 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:35:33 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:35:33 - autorizando (cliente),(cliente)
-03/03/21 - 18:35:33 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:35:56 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:35:56 - autorizando (cliente),(cliente)
-03/03/21 - 18:35:56 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:36:35 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:36:35 - autorizando (cliente),(cliente)
-03/03/21 - 18:36:35 - @@@@@@@@@ PAGINA DO ORCAMENTO DA VIAGEM @@@@@@@@@@
-03/03/21 - 18:36:50 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:36:50 - autorizando (cliente),(cliente)
-03/03/21 - 18:36:50 - @@@@@@@@@ PAGINA DO ORCAMENTO DA VIAGEM @@@@@@@@@@
-03/03/21 - 18:36:50 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:37:04 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:37:04 - autorizando (cliente),(cliente)
-03/03/21 - 18:37:04 - @@@@@@@@@ PAGINA DO ORCAMENTO DA VIAGEM @@@@@@@@@@
-03/03/21 - 18:37:04 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:37:38 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:37:38 - autorizando (cliente),(cliente)
-03/03/21 - 18:37:38 - @@@@@@@@@ PAGINA DO ORCAMENTO DA VIAGEM @@@@@@@@@@
-03/03/21 - 18:37:38 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:38:09 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:38:09 - autorizando (cliente),(cliente)
-03/03/21 - 18:38:09 - @@@@@@@@@ PAGINA DO ORCAMENTO DA VIAGEM @@@@@@@@@@
-03/03/21 - 18:38:09 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:39:49 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:39:49 - autorizando (cliente),(cliente)
-03/03/21 - 18:39:49 - @@@@@@@@@ PAGINA DO ORCAMENTO DA VIAGEM @@@@@@@@@@
-03/03/21 - 18:39:49 - PAGINA DO ORCAMENTO DA VIAGEM ID CARRINHO :: 1
-03/03/21 - 18:54:57 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:54:57 - autorizando (cliente),(cliente)
-03/03/21 - 18:55:00 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 18:55:00 - autorizando (cliente),(cliente)
-03/03/21 - 19:58:38 - redir configurado
-03/03/21 - 19:58:47 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 19:58:47 - autorizando (cliente),(cliente)
-03/03/21 - 19:58:51 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 19:58:51 - autorizando (cliente),(cliente)
-03/03/21 - 19:58:56 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 19:58:56 - autorizando (cliente),(cliente)
-03/03/21 - 20:01:16 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:01:16 - autorizando (cliente),(cliente)
-03/03/21 - 20:01:18 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:01:18 - autorizando (cliente),(cliente)
-03/03/21 - 20:01:57 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:01:57 - autorizando (cliente),(cliente)
-03/03/21 - 20:01:59 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:01:59 - autorizando (cliente),(cliente)
-03/03/21 - 20:02:04 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:02:04 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:12 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:12 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:13 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:13 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:17 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:17 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:45 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:45 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:46 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:46 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:48 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:48 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:48 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:48 - autorizando (cliente),(cliente)
-03/03/21 - 20:03:55 - conferindo permissoes (cliente),(cliente)
-03/03/21 - 20:03:55 - autorizando (cliente),(cliente)
-04/03/21 - 01:50:50 - redir configurado
-04/03/21 - 02:01:06 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:06 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:07 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:07 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:09 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:09 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:14 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:14 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:15 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:15 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:19 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:19 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:19 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:19 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:21 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:21 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:22 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:22 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:25 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:25 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:29 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:29 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:33 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:33 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:35 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:35 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:38 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:38 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:40 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:40 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:42 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:42 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:43 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:43 - autorizando (cliente),(cliente)
-04/03/21 - 02:01:49 - conferindo permissoes (cliente),(cliente)
-04/03/21 - 02:01:49 - autorizando (cliente),(cliente)
-04/03/21 - 09:36:26 - redir configurado
-04/03/21 - 09:37:33 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:37:33 - autorizando (admin),(admin)
-04/03/21 - 09:37:36 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:37:36 - autorizando (admin),(admin)
-04/03/21 - 09:37:40 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:37:40 - autorizando (admin),(admin)
-04/03/21 - 09:37:50 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:37:50 - autorizando (admin),(admin)
-04/03/21 - 09:37:52 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:37:52 - autorizando (admin),(admin)
-04/03/21 - 09:37:58 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:37:58 - autorizando (admin),(admin)
-04/03/21 - 09:37:58 - IDDOSERVICO: 1
-04/03/21 - 09:37:58 - IDDOSERVICO: 2
-04/03/21 - 09:37:58 - IDDOSERVICO: 3
-04/03/21 - 09:37:58 - IDDOSERVICO: 4
-04/03/21 - 09:37:58 - IDDOSERVICO: 5
-04/03/21 - 09:38:00 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:38:00 - autorizando (admin),(admin)
-04/03/21 - 09:38:00 - IDDOSERVICO: 1
-04/03/21 - 09:38:00 - IDDOSERVICO: 2
-04/03/21 - 09:38:00 - IDDOSERVICO: 3
-04/03/21 - 09:38:00 - IDDOSERVICO: 4
-04/03/21 - 09:38:00 - IDDOSERVICO: 5
-04/03/21 - 09:38:08 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:38:08 - autorizando (admin),(admin)
-04/03/21 - 09:38:11 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:38:11 - autorizando (admin),(admin)
-04/03/21 - 09:38:11 - IDDOSERVICO: 1
-04/03/21 - 09:38:11 - IDDOSERVICO: 2
-04/03/21 - 09:38:11 - IDDOSERVICO: 3
-04/03/21 - 09:38:11 - IDDOSERVICO: 4
-04/03/21 - 09:38:11 - IDDOSERVICO: 5
-04/03/21 - 09:42:17 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:42:17 - autorizando (admin),(admin)
-04/03/21 - 09:42:17 - IDDOSERVICO: 1
-04/03/21 - 09:42:17 - IDDOSERVICO: 2
-04/03/21 - 09:42:17 - IDDOSERVICO: 3
-04/03/21 - 09:42:17 - IDDOSERVICO: 4
-04/03/21 - 09:42:17 - IDDOSERVICO: 5
-04/03/21 - 09:45:18 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:45:18 - autorizando (admin),(admin)
-04/03/21 - 09:45:18 - IDDOSERVICO: 1
-04/03/21 - 09:45:18 - IDDOSERVICO: 2
-04/03/21 - 09:45:18 - IDDOSERVICO: 3
-04/03/21 - 09:45:18 - IDDOSERVICO: 4
-04/03/21 - 09:45:18 - IDDOSERVICO: 5
-04/03/21 - 09:45:21 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:45:21 - autorizando (admin),(admin)
-04/03/21 - 09:45:21 - IDDOSERVICO: 1
-04/03/21 - 09:45:21 - IDDOSERVICO: 2
-04/03/21 - 09:45:21 - IDDOSERVICO: 3
-04/03/21 - 09:45:21 - IDDOSERVICO: 4
-04/03/21 - 09:45:21 - IDDOSERVICO: 5
-04/03/21 - 09:50:46 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:50:46 - autorizando (admin),(admin)
-04/03/21 - 09:50:46 - IDDOSERVICO: 1
-04/03/21 - 09:50:46 - IDDOSERVICO: 2
-04/03/21 - 09:50:46 - IDDOSERVICO: 3
-04/03/21 - 09:50:46 - IDDOSERVICO: 4
-04/03/21 - 09:50:46 - IDDOSERVICO: 5
-04/03/21 - 09:51:03 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:51:03 - autorizando (admin),(admin)
-04/03/21 - 09:51:03 - IDDOSERVICO: 1
-04/03/21 - 09:51:03 - IDDOSERVICO: 2
-04/03/21 - 09:51:03 - IDDOSERVICO: 3
-04/03/21 - 09:51:03 - IDDOSERVICO: 4
-04/03/21 - 09:51:03 - IDDOSERVICO: 5
-04/03/21 - 09:51:04 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:51:04 - autorizando (admin),(admin)
-04/03/21 - 09:51:04 - IDDOSERVICO: 1
-04/03/21 - 09:51:04 - IDDOSERVICO: 2
-04/03/21 - 09:51:04 - IDDOSERVICO: 3
-04/03/21 - 09:51:04 - IDDOSERVICO: 4
-04/03/21 - 09:51:04 - IDDOSERVICO: 5
-04/03/21 - 09:51:12 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:51:12 - autorizando (admin),(admin)
-04/03/21 - 09:51:12 - IDDOSERVICO: 1
-04/03/21 - 09:51:12 - IDDOSERVICO: 2
-04/03/21 - 09:51:12 - IDDOSERVICO: 3
-04/03/21 - 09:51:12 - IDDOSERVICO: 4
-04/03/21 - 09:51:12 - IDDOSERVICO: 5
-04/03/21 - 09:51:13 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:51:13 - autorizando (admin),(admin)
-04/03/21 - 09:51:13 - IDDOSERVICO: 1
-04/03/21 - 09:51:13 - IDDOSERVICO: 2
-04/03/21 - 09:51:13 - IDDOSERVICO: 3
-04/03/21 - 09:51:13 - IDDOSERVICO: 4
-04/03/21 - 09:51:13 - IDDOSERVICO: 5
-04/03/21 - 09:51:28 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:51:28 - autorizando (admin),(admin)
-04/03/21 - 09:51:28 - IDDOSERVICO: 1
-04/03/21 - 09:51:28 - IDDOSERVICO: 2
-04/03/21 - 09:51:28 - IDDOSERVICO: 3
-04/03/21 - 09:51:28 - IDDOSERVICO: 4
-04/03/21 - 09:51:28 - IDDOSERVICO: 5
-04/03/21 - 09:52:57 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:52:57 - autorizando (admin),(admin)
-04/03/21 - 09:52:57 - IDDOSERVICO: 1
-04/03/21 - 09:52:57 - IDDOSERVICO: 2
-04/03/21 - 09:52:57 - IDDOSERVICO: 3
-04/03/21 - 09:52:57 - IDDOSERVICO: 4
-04/03/21 - 09:52:57 - IDDOSERVICO: 5
-04/03/21 - 09:53:42 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:53:42 - autorizando (admin),(admin)
-04/03/21 - 09:53:42 - IDDOSERVICO: 1
-04/03/21 - 09:53:42 - IDDOSERVICO: 2
-04/03/21 - 09:53:42 - IDDOSERVICO: 3
-04/03/21 - 09:53:42 - IDDOSERVICO: 4
-04/03/21 - 09:53:42 - IDDOSERVICO: 5
-04/03/21 - 09:54:30 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:54:30 - autorizando (admin),(admin)
-04/03/21 - 09:54:30 - IDDOSERVICO: 1
-04/03/21 - 09:54:30 - IDDOSERVICO: 2
-04/03/21 - 09:54:30 - IDDOSERVICO: 3
-04/03/21 - 09:54:30 - IDDOSERVICO: 4
-04/03/21 - 09:54:30 - IDDOSERVICO: 5
-04/03/21 - 09:54:41 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:54:41 - autorizando (admin),(admin)
-04/03/21 - 09:54:41 - IDDOSERVICO: 1
-04/03/21 - 09:54:41 - IDDOSERVICO: 2
-04/03/21 - 09:54:41 - IDDOSERVICO: 3
-04/03/21 - 09:54:41 - IDDOSERVICO: 4
-04/03/21 - 09:54:41 - IDDOSERVICO: 5
-04/03/21 - 09:55:08 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:55:08 - autorizando (admin),(admin)
-04/03/21 - 09:55:08 - IDDOSERVICO: 1
-04/03/21 - 09:55:08 - IDDOSERVICO: 2
-04/03/21 - 09:55:08 - IDDOSERVICO: 3
-04/03/21 - 09:55:08 - IDDOSERVICO: 4
-04/03/21 - 09:55:08 - IDDOSERVICO: 5
-04/03/21 - 09:56:08 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:56:08 - autorizando (admin),(admin)
-04/03/21 - 09:56:08 - IDDOSERVICO: 1
-04/03/21 - 09:56:08 - IDDOSERVICO: 2
-04/03/21 - 09:56:08 - IDDOSERVICO: 3
-04/03/21 - 09:56:08 - IDDOSERVICO: 4
-04/03/21 - 09:56:08 - IDDOSERVICO: 5
-04/03/21 - 09:56:25 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:56:25 - autorizando (admin),(admin)
-04/03/21 - 09:56:25 - IDDOSERVICO: 1
-04/03/21 - 09:56:25 - IDDOSERVICO: 2
-04/03/21 - 09:56:25 - IDDOSERVICO: 3
-04/03/21 - 09:56:25 - IDDOSERVICO: 4
-04/03/21 - 09:56:25 - IDDOSERVICO: 5
-04/03/21 - 09:56:48 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:56:48 - autorizando (admin),(admin)
-04/03/21 - 09:56:48 - IDDOSERVICO: 1
-04/03/21 - 09:56:48 - IDDOSERVICO: 2
-04/03/21 - 09:56:48 - IDDOSERVICO: 3
-04/03/21 - 09:56:48 - IDDOSERVICO: 4
-04/03/21 - 09:56:48 - IDDOSERVICO: 5
-04/03/21 - 09:57:18 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:57:18 - autorizando (admin),(admin)
-04/03/21 - 09:57:18 - IDDOSERVICO: 1
-04/03/21 - 09:57:18 - IDDOSERVICO: 2
-04/03/21 - 09:57:18 - IDDOSERVICO: 3
-04/03/21 - 09:57:18 - IDDOSERVICO: 4
-04/03/21 - 09:57:18 - IDDOSERVICO: 5
-04/03/21 - 09:58:30 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:58:30 - autorizando (admin),(admin)
-04/03/21 - 09:58:30 - IDDOSERVICO: 1
-04/03/21 - 09:58:30 - IDDOSERVICO: 2
-04/03/21 - 09:58:30 - IDDOSERVICO: 3
-04/03/21 - 09:58:30 - IDDOSERVICO: 4
-04/03/21 - 09:58:30 - IDDOSERVICO: 5
-04/03/21 - 09:59:01 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:59:01 - autorizando (admin),(admin)
-04/03/21 - 09:59:01 - IDDOSERVICO: 1
-04/03/21 - 09:59:01 - IDDOSERVICO: 2
-04/03/21 - 09:59:01 - IDDOSERVICO: 3
-04/03/21 - 09:59:01 - IDDOSERVICO: 4
-04/03/21 - 09:59:01 - IDDOSERVICO: 5
-04/03/21 - 09:59:05 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:59:05 - autorizando (admin),(admin)
-04/03/21 - 09:59:05 - IDDOSERVICO: 1
-04/03/21 - 09:59:05 - IDDOSERVICO: 2
-04/03/21 - 09:59:05 - IDDOSERVICO: 3
-04/03/21 - 09:59:05 - IDDOSERVICO: 4
-04/03/21 - 09:59:05 - IDDOSERVICO: 5
-04/03/21 - 09:59:53 - conferindo permissoes (admin),(admin)
-04/03/21 - 09:59:53 - autorizando (admin),(admin)
-04/03/21 - 09:59:53 - IDDOSERVICO: 1
-04/03/21 - 09:59:53 - IDDOSERVICO: 2
-04/03/21 - 09:59:53 - IDDOSERVICO: 3
-04/03/21 - 09:59:53 - IDDOSERVICO: 4
-04/03/21 - 09:59:53 - IDDOSERVICO: 5
-04/03/21 - 10:00:06 - conferindo permissoes (admin),(admin)
-04/03/21 - 10:00:06 - autorizando (admin),(admin)
-04/03/21 - 10:00:06 - IDDOSERVICO: 1
-04/03/21 - 10:00:06 - IDDOSERVICO: 2
-04/03/21 - 10:00:06 - IDDOSERVICO: 3
-04/03/21 - 10:00:06 - IDDOSERVICO: 4
-04/03/21 - 10:00:06 - IDDOSERVICO: 5
-04/03/21 - 10:00:39 - conferindo permissoes (admin),(admin)
-04/03/21 - 10:00:39 - autorizando (admin),(admin)
-04/03/21 - 10:00:39 - IDDOSERVICO: 1
-04/03/21 - 10:00:39 - IDDOSERVICO: 2
-04/03/21 - 10:00:39 - IDDOSERVICO: 3
-04/03/21 - 10:00:39 - IDDOSERVICO: 4
-04/03/21 - 10:00:39 - IDDOSERVICO: 5
+05/03/21 - 19:40:38 - redir configurado
+05/03/21 - 19:40:47 - Inciando rotina de login para user/pwd: website.demonstracao@gmail.com / 32125 (  YzU1YWEwMmE0YTM0ODFiZTIwODc4ZTAyYzU5NmNkZmU9PT0=  )
+05/03/21 - 19:40:47 - Localizado um usuario... prosseguindo para o login
+05/03/21 - 19:40:47 - OK: Cadastro confirmado e Ativo!
+05/03/21 - 19:40:47 - setando variaveis da sessao...
+05/03/21 - 19:40:53 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:40:53 - autorizando (cliente),(cliente)
+05/03/21 - 19:41:31 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:41:31 - autorizando (cliente),(cliente)
+05/03/21 - 19:41:32 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:41:32 - autorizando (cliente),(cliente)
+05/03/21 - 19:41:34 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:41:34 - autorizando (cliente),(cliente)
+05/03/21 - 19:41:35 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:41:35 - autorizando (cliente),(cliente)
+05/03/21 - 19:46:34 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:46:34 - autorizando (cliente),(cliente)
+05/03/21 - 19:47:20 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:47:20 - autorizando (cliente),(cliente)
+05/03/21 - 19:48:00 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:48:00 - autorizando (cliente),(cliente)
+05/03/21 - 19:48:35 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:48:35 - autorizando (cliente),(cliente)
+05/03/21 - 19:49:11 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:49:11 - autorizando (cliente),(cliente)
+05/03/21 - 19:49:34 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:49:34 - autorizando (cliente),(cliente)
+05/03/21 - 19:49:42 - conferindo permissoes (cliente),(cliente)
+05/03/21 - 19:49:42 - autorizando (cliente),(cliente)
+05/03/21 - 20:58:57 - redir configurado
+06/03/21 - 01:41:06 - redir configurado
+06/03/21 - 01:41:12 - Inciando rotina de login para user/pwd: website.demonstracao@gmail.com / 32125 (  YzU1YWEwMmE0YTM0ODFiZTIwODc4ZTAyYzU5NmNkZmU9PT0=  )
+06/03/21 - 01:41:12 - Localizado um usuario... prosseguindo para o login
+06/03/21 - 01:41:12 - OK: Cadastro confirmado e Ativo!
+06/03/21 - 01:41:12 - setando variaveis da sessao...
+06/03/21 - 01:41:17 - conferindo permissoes (cliente),(cliente)
+06/03/21 - 01:41:17 - autorizando (cliente),(cliente)
+06/03/21 - 01:47:23 - redir configurado

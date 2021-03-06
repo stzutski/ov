@@ -20,6 +20,7 @@ if(isSet($_GET['u'])&&$_GET['u']=='logout'){
 
 //FUNCOES DO APP
 require_once('php/functions/functions.php');
+require_once('php/functions/functions.email.php');
 require_once('php/functions/functions.html.php');
 
 if(!isSet($_SESSION['_uL'])){

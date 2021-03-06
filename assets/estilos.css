@@ -7,12 +7,13 @@ max-width: 300px;
 margin:0px auto;
 text-align:center;
 }
-ul.mainNav > li{
+ul.mainNav li{
 line-height:30px;
 list-style:none;
 }
 
-.mainNav > li > a{color:#fff;}
+.mainNav a{color:#fff;}
+
 
 .mainNav-cliente{background:#3440FF;}
 .mainNav-admin{background:#A8000A;}
@@ -46,6 +47,11 @@ list-style:none;
 
 .tb-carrinho{width:100%;}
 
+
+
+.indent-20{
+  padding-left:20px;
+}
 
 
 

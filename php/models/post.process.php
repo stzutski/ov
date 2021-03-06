@@ -3,51 +3,31 @@
 
 if(postVar('do')=='login'){
 
-  if(postVar('user')=='cliente' && postVar('pwd')=='cliente'){
-      $_SESSION['_uL']    = encode('cliente');
-      $_SESSION['logado'] = 'sim';
-  }
-  elseif(postVar('user')=='admin' && postVar('pwd')=='admin'){
-      $_SESSION['_uL'] = encode('admin');
-      $_SESSION['logado'] = 'sim';
-  }
-  elseif(postVar('user')=='master' && postVar('pwd')=='master'){
-      $_SESSION['_uL'] = encode('master');
-      $_SESSION['logado'] = 'sim';
-  }else{
-    $app->redirect(URLAPP . 'erro-login/nao-autorizado');
-  }
-  
-  $app->redirect(URLAPP);
+  //model com as rotinas de recuperacao de senha de acesso
+  include_once('php/models/site/login.site.model.php');
+
 }
+
+//recuperacao de senha do usuario
+if(postVar('do')=='lostpwd'){
+  
+  //model com as rotinas de recuperacao de senha de acesso
+  include_once('php/models/site/recuperar-senha.site.model.php');
+  
+}
+
+//reenvio de email de confirmação do cadastro
+//~ if(postVar('do')=='reconf'){
+  
+  //~ //model com as rotinas de recuperacao de senha de acesso
+  //~ include_once('php/models/site/login.site.model.php');
+  
+//~ }
 
 if(postVar('do')=='saveorder'){
   
-  //recebe dados do post para recuperar a categoria os servicos e as quantidades contratadas
-  $camposPost   = $_POST;
-  $itensPedido  = array();
-  foreach ($camposPost as $key => $value) {
-    
-    if(strstr($key,'qt_')){
-        $iPed              = str_replace('qt_','',$key);
-        $itensPedido[$iPed] = $value;//grava no array o ID do servidor e a quantidade solicitada (ITENS DO PEDIDO)
-    }
-    
-  }
-  
-  if(count($itensPedido)>0 && $camposPost['idc']){
-    
-    $novo_pedido['itens']     = $itensPedido;
-    $novo_pedido['categoria'] = $camposPost['idc'];
-    
-    //insere um novo pedido na tabela
-    include_once ('php/models/cliente/servicos.cliente.model.php');
-    
-    if(isSet($idPedido)){
-      $app->redirect(URLAPP .'carrinho-pedido/' . $idPedido);
-    }
-    
-  }
+  //model com as rotinas para gerar novos pedidos
+  include_once('php/models/cliente/pedidos.site.model.php');  
   
 }
 

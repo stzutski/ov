@@ -479,7 +479,7 @@ function listaUF($cod='',$select=false){
     if($select==true){
       foreach ($_UF as $key => $value) {
         if($cod!=''){
-          if($cod==$key){$selected='selected ';}else{$selected='';}
+          if(strtoupper($cod)==$key){$selected='selected ';}else{$selected='';}
         }
         $tag .= "<option ${selected}value=\"$key\">$value</option>\n";
       }  
@@ -487,10 +487,10 @@ function listaUF($cod='',$select=false){
     }
 
     if($select==false && $cod!=''){
-      if(!is_array($_pais[$cod]) || $_pais[$cod]==''){
+      if(!is_array($_UF[$cod]) || $_UF[$cod]==''){
         return false;
       }else{
-        return $_pais[$cod];
+        return $_UF[$cod];
       }
     }  
 
