@@ -1,38 +1,487 @@
-05/03/21 - 19:40:38 - redir configurado
-05/03/21 - 19:40:47 - Inciando rotina de login para user/pwd: website.demonstracao@gmail.com / 32125 (  YzU1YWEwMmE0YTM0ODFiZTIwODc4ZTAyYzU5NmNkZmU9PT0=  )
-05/03/21 - 19:40:47 - Localizado um usuario... prosseguindo para o login
-05/03/21 - 19:40:47 - OK: Cadastro confirmado e Ativo!
-05/03/21 - 19:40:47 - setando variaveis da sessao...
-05/03/21 - 19:40:53 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:40:53 - autorizando (cliente),(cliente)
-05/03/21 - 19:41:31 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:41:31 - autorizando (cliente),(cliente)
-05/03/21 - 19:41:32 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:41:32 - autorizando (cliente),(cliente)
-05/03/21 - 19:41:34 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:41:34 - autorizando (cliente),(cliente)
-05/03/21 - 19:41:35 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:41:35 - autorizando (cliente),(cliente)
-05/03/21 - 19:46:34 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:46:34 - autorizando (cliente),(cliente)
-05/03/21 - 19:47:20 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:47:20 - autorizando (cliente),(cliente)
-05/03/21 - 19:48:00 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:48:00 - autorizando (cliente),(cliente)
-05/03/21 - 19:48:35 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:48:35 - autorizando (cliente),(cliente)
-05/03/21 - 19:49:11 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:49:11 - autorizando (cliente),(cliente)
-05/03/21 - 19:49:34 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:49:34 - autorizando (cliente),(cliente)
-05/03/21 - 19:49:42 - conferindo permissoes (cliente),(cliente)
-05/03/21 - 19:49:42 - autorizando (cliente),(cliente)
-05/03/21 - 20:58:57 - redir configurado
-06/03/21 - 01:41:06 - redir configurado
-06/03/21 - 01:41:12 - Inciando rotina de login para user/pwd: website.demonstracao@gmail.com / 32125 (  YzU1YWEwMmE0YTM0ODFiZTIwODc4ZTAyYzU5NmNkZmU9PT0=  )
-06/03/21 - 01:41:12 - Localizado um usuario... prosseguindo para o login
-06/03/21 - 01:41:12 - OK: Cadastro confirmado e Ativo!
-06/03/21 - 01:41:12 - setando variaveis da sessao...
-06/03/21 - 01:41:17 - conferindo permissoes (cliente),(cliente)
-06/03/21 - 01:41:17 - autorizando (cliente),(cliente)
-06/03/21 - 01:47:23 - redir configurado
+12/03/21 - 18:19:03 - REORDERING CALL:::
+12/03/21 - 18:19:03 - ZODERING TABELA::: etapaServ
+12/03/21 - 18:19:03 - Orderm das etapas::: ["etapaServ_2","etapaServ_1",""]
+12/03/21 - 18:19:03 - INICIANDO RE ORDENACAO
+12/03/21 - 18:19:03 - INDICE POSSUI table_
+12/03/21 - 18:19:03 - ID EXTRAIDO:: 2
+12/03/21 - 18:19:03 - VALOR (2) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:19:03 - RE-ORDENANDO (2 ,1 , 1)
+12/03/21 - 18:19:03 - INDICE POSSUI table_
+12/03/21 - 18:19:03 - ID EXTRAIDO:: 1
+12/03/21 - 18:19:03 - VALOR (1) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:19:03 - RE-ORDENANDO (1 ,1 , 2)
+12/03/21 - 18:20:02 - REORDERING CALL:::
+12/03/21 - 18:20:02 - ZODERING TABELA::: etapaServ
+12/03/21 - 18:20:02 - Orderm das etapas::: ["etapaServ_1","etapaServ_2",""]
+12/03/21 - 18:20:02 - INICIANDO RE ORDENACAO
+12/03/21 - 18:20:02 - INDICE POSSUI table_
+12/03/21 - 18:20:02 - ID EXTRAIDO:: 1
+12/03/21 - 18:20:02 - VALOR (1) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:20:02 - RE-ORDENANDO (1 ,1 , 1)
+12/03/21 - 18:20:02 - INDICE POSSUI table_
+12/03/21 - 18:20:02 - ID EXTRAIDO:: 2
+12/03/21 - 18:20:02 - VALOR (2) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:20:02 - RE-ORDENANDO (2 ,1 , 2)
+12/03/21 - 18:20:09 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:20:09 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:09 - autorizando (admin),(admin)
+12/03/21 - 18:20:11 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:20:11 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:11 - autorizando (admin),(admin)
+12/03/21 - 18:20:11 - Valor de DATA VAR::: Pagamento da Fatura
+12/03/21 - 18:20:11 - Valor de DATA VAR::: Pagamento do servico contratado
+12/03/21 - 18:20:11 - Valor de DATA VAR::: 
+12/03/21 - 18:20:11 - Valor de DATA VAR::: 1
+12/03/21 - 18:20:13 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:20:13 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:13 - autorizando (admin),(admin)
+12/03/21 - 18:20:15 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:20:15 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:15 - autorizando (admin),(admin)
+12/03/21 - 18:20:15 - Valor de DATA VAR::: Preencher ficha de servico 
+12/03/21 - 18:20:15 - Valor de DATA VAR::: Preencher a ficha com os dados necessarios para iniciar o processo de assessoria na emissao do visto
+12/03/21 - 18:20:15 - Valor de DATA VAR::: 
+12/03/21 - 18:20:15 - Valor de DATA VAR::: 1
+12/03/21 - 18:20:18 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:20:18 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:18 - autorizando (admin),(admin)
+12/03/21 - 18:20:21 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:20:21 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:21 - autorizando (admin),(admin)
+12/03/21 - 18:20:21 - Valor de DATA VAR::: Preencher ficha de servico 
+12/03/21 - 18:20:21 - Valor de DATA VAR::: Preencher a ficha com os dados necessarios para iniciar o processo de assessoria na emissao do visto
+12/03/21 - 18:20:21 - Valor de DATA VAR::: 
+12/03/21 - 18:20:21 - Valor de DATA VAR::: 1
+12/03/21 - 18:20:50 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:20:50 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:50 - autorizando (admin),(admin)
+12/03/21 - 18:20:52 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:52 - autorizando (admin),(admin)
+12/03/21 - 18:20:54 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:20:54 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:54 - autorizando (admin),(admin)
+12/03/21 - 18:20:55 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:20:55 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:20:55 - autorizando (admin),(admin)
+12/03/21 - 18:20:55 - Valor de DATA VAR::: definir roteiro da viagem
+12/03/21 - 18:20:55 - Valor de DATA VAR::: 
+12/03/21 - 18:20:55 - Valor de DATA VAR::: 
+12/03/21 - 18:20:55 - Valor de DATA VAR::: 1
+12/03/21 - 18:20:59 - REORDERING CALL:::
+12/03/21 - 18:20:59 - ZODERING TABELA::: etapaServ
+12/03/21 - 18:20:59 - Orderm das etapas::: ["etapaServ_7","etapaServ_8",""]
+12/03/21 - 18:20:59 - INICIANDO RE ORDENACAO
+12/03/21 - 18:20:59 - INDICE POSSUI table_
+12/03/21 - 18:20:59 - ID EXTRAIDO:: 7
+12/03/21 - 18:20:59 - VALOR (7) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:20:59 - RE-ORDENANDO (7 ,5 , 1)
+12/03/21 - 18:20:59 - INDICE POSSUI table_
+12/03/21 - 18:20:59 - ID EXTRAIDO:: 8
+12/03/21 - 18:20:59 - VALOR (8) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:20:59 - RE-ORDENANDO (8 ,5 , 2)
+12/03/21 - 18:21:03 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:03 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:03 - autorizando (admin),(admin)
+12/03/21 - 18:21:04 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:21:04 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:04 - autorizando (admin),(admin)
+12/03/21 - 18:21:04 - Valor de DATA VAR::: Visita consulado alemao
+12/03/21 - 18:21:04 - Valor de DATA VAR::: 
+12/03/21 - 18:21:04 - Valor de DATA VAR::: 
+12/03/21 - 18:21:04 - Valor de DATA VAR::: 1
+12/03/21 - 18:21:07 - REORDERING CALL:::
+12/03/21 - 18:21:07 - ZODERING TABELA::: etapaServ
+12/03/21 - 18:21:07 - Orderm das etapas::: ["etapaServ_6","etapaServ_5",""]
+12/03/21 - 18:21:07 - INICIANDO RE ORDENACAO
+12/03/21 - 18:21:07 - INDICE POSSUI table_
+12/03/21 - 18:21:07 - ID EXTRAIDO:: 6
+12/03/21 - 18:21:07 - VALOR (6) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:21:07 - RE-ORDENANDO (6 ,4 , 1)
+12/03/21 - 18:21:07 - INDICE POSSUI table_
+12/03/21 - 18:21:07 - ID EXTRAIDO:: 5
+12/03/21 - 18:21:07 - VALOR (5) E INTEIRO PROSSEGUINDO
+12/03/21 - 18:21:07 - RE-ORDENANDO (5 ,4 , 2)
+12/03/21 - 18:21:08 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:08 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:08 - autorizando (admin),(admin)
+12/03/21 - 18:21:11 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:11 - autorizando (admin),(admin)
+12/03/21 - 18:21:13 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:13 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:13 - autorizando (admin),(admin)
+12/03/21 - 18:21:15 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:15 - autorizando (admin),(admin)
+12/03/21 - 18:21:17 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:17 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:17 - autorizando (admin),(admin)
+12/03/21 - 18:21:18 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:18 - autorizando (admin),(admin)
+12/03/21 - 18:21:20 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:20 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:20 - autorizando (admin),(admin)
+12/03/21 - 18:21:22 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:22 - autorizando (admin),(admin)
+12/03/21 - 18:21:43 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:43 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:43 - autorizando (admin),(admin)
+12/03/21 - 18:21:47 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:47 - autorizando (admin),(admin)
+12/03/21 - 18:21:48 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:48 - autorizando (admin),(admin)
+12/03/21 - 18:21:50 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:21:50 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:21:50 - autorizando (admin),(admin)
+12/03/21 - 18:22:04 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:22:04 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:22:04 - autorizando (admin),(admin)
+12/03/21 - 18:22:04 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 18:22:04 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 18:22:04 - Valor de DATA VAR::: 
+12/03/21 - 18:22:04 - Valor de DATA VAR::: 0
+12/03/21 - 18:22:07 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:22:07 - autorizando (admin),(admin)
+12/03/21 - 18:22:09 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:22:09 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:22:09 - autorizando (admin),(admin)
+12/03/21 - 18:22:17 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:22:17 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:22:17 - autorizando (admin),(admin)
+12/03/21 - 18:22:17 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 18:22:17 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 18:22:17 - Valor de DATA VAR::: 
+12/03/21 - 18:22:17 - Valor de DATA VAR::: 0
+12/03/21 - 18:35:36 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:35:36 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:35:36 - autorizando (admin),(admin)
+12/03/21 - 18:35:36 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 18:35:36 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 18:35:36 - Valor de DATA VAR::: 
+12/03/21 - 18:35:36 - Valor de DATA VAR::: 0
+12/03/21 - 18:35:38 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:35:38 - autorizando (admin),(admin)
+12/03/21 - 18:35:40 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:35:40 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:35:40 - autorizando (admin),(admin)
+12/03/21 - 18:35:41 - CARREGANDO FASSSSEESSS
+12/03/21 - 18:35:41 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:35:41 - autorizando (admin),(admin)
+12/03/21 - 18:35:41 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 18:35:41 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 18:35:41 - Valor de DATA VAR::: 
+12/03/21 - 18:35:41 - Valor de DATA VAR::: 0
+12/03/21 - 18:35:58 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:35:58 - autorizando (admin),(admin)
+12/03/21 - 18:36:03 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:36:03 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:36:03 - autorizando (admin),(admin)
+12/03/21 - 18:51:57 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:51:57 - autorizando (admin),(admin)
+12/03/21 - 18:52:01 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:52:01 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:52:01 - autorizando (admin),(admin)
+12/03/21 - 18:52:23 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:52:23 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:52:23 - autorizando (admin),(admin)
+12/03/21 - 18:52:26 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:52:26 - autorizando (admin),(admin)
+12/03/21 - 18:52:39 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:52:39 - autorizando (admin),(admin)
+12/03/21 - 18:52:41 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:52:41 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:52:41 - autorizando (admin),(admin)
+12/03/21 - 18:56:02 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:56:02 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:56:02 - autorizando (admin),(admin)
+12/03/21 - 18:56:27 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:56:27 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:56:27 - autorizando (admin),(admin)
+12/03/21 - 18:58:53 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:58:53 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:58:53 - autorizando (admin),(admin)
+12/03/21 - 18:59:00 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 18:59:00 - conferindo permissoes (admin),(admin)
+12/03/21 - 18:59:00 - autorizando (admin),(admin)
+12/03/21 - 19:00:09 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:00:09 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:00:09 - autorizando (admin),(admin)
+12/03/21 - 19:05:52 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:05:52 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:05:52 - autorizando (admin),(admin)
+12/03/21 - 19:11:46 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:11:46 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:11:46 - autorizando (admin),(admin)
+12/03/21 - 19:14:00 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:14:00 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:14:00 - autorizando (admin),(admin)
+12/03/21 - 19:14:45 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:14:45 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:14:45 - autorizando (admin),(admin)
+12/03/21 - 19:14:59 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:14:59 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:14:59 - autorizando (admin),(admin)
+12/03/21 - 19:19:20 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:19:20 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:19:20 - autorizando (admin),(admin)
+12/03/21 - 19:19:22 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:19:22 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:19:22 - autorizando (admin),(admin)
+12/03/21 - 19:19:24 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:19:24 - autorizando (admin),(admin)
+12/03/21 - 19:19:25 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:19:25 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:19:25 - autorizando (admin),(admin)
+12/03/21 - 19:24:08 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:24:08 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:24:08 - autorizando (admin),(admin)
+12/03/21 - 19:24:27 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:24:27 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:24:27 - autorizando (admin),(admin)
+12/03/21 - 19:26:29 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:26:29 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:26:29 - autorizando (admin),(admin)
+12/03/21 - 19:27:35 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 19:27:35 - conferindo permissoes (admin),(admin)
+12/03/21 - 19:27:35 - autorizando (admin),(admin)
+12/03/21 - 20:56:58 - redir configurado
+12/03/21 - 20:57:03 - Inciando rotina de login para user/pwd: roberto.stzutski@gmail.com / 32125 (  YzU1YWEwMmE0YTM0ODFiZTIwODc4ZTAyYzU5NmNkZmU9PT0=  )
+12/03/21 - 20:57:03 - Localizado um usuario... prosseguindo para o login
+12/03/21 - 20:57:03 - OK: Cadastro confirmado e Ativo!
+12/03/21 - 20:57:03 - setando variaveis da sessao...
+12/03/21 - 20:57:06 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:06 - autorizando (admin),(admin)
+12/03/21 - 20:57:07 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:07 - autorizando (admin),(admin)
+12/03/21 - 20:57:10 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:10 - autorizando (admin),(admin)
+12/03/21 - 20:57:14 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:14 - autorizando (admin),(admin)
+12/03/21 - 20:57:16 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:57:16 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:16 - autorizando (admin),(admin)
+12/03/21 - 20:57:38 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:57:38 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:38 - autorizando (admin),(admin)
+12/03/21 - 20:57:54 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:57:54 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:57:54 - autorizando (admin),(admin)
+12/03/21 - 20:58:01 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:58:01 - autorizando (admin),(admin)
+12/03/21 - 20:58:03 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:58:03 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:58:03 - autorizando (admin),(admin)
+12/03/21 - 20:58:19 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:58:19 - autorizando (admin),(admin)
+12/03/21 - 20:58:22 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:58:22 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:58:22 - autorizando (admin),(admin)
+12/03/21 - 20:58:39 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:58:39 - autorizando (admin),(admin)
+12/03/21 - 20:59:06 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:59:06 - autorizando (admin),(admin)
+12/03/21 - 20:59:08 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:59:08 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:59:08 - autorizando (admin),(admin)
+12/03/21 - 20:59:15 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:59:15 - autorizando (admin),(admin)
+12/03/21 - 20:59:17 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:59:17 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:59:17 - autorizando (admin),(admin)
+12/03/21 - 20:59:20 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:59:20 - autorizando (admin),(admin)
+12/03/21 - 20:59:25 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 20:59:25 - conferindo permissoes (admin),(admin)
+12/03/21 - 20:59:25 - autorizando (admin),(admin)
+12/03/21 - 21:37:10 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:37:10 - autorizando (admin),(admin)
+12/03/21 - 21:37:14 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:37:14 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:37:14 - autorizando (admin),(admin)
+12/03/21 - 21:37:26 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:37:26 - autorizando (admin),(admin)
+12/03/21 - 21:37:29 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:37:29 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:37:29 - autorizando (admin),(admin)
+12/03/21 - 21:40:03 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:40:03 - autorizando (admin),(admin)
+12/03/21 - 21:40:09 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:40:09 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:40:09 - autorizando (admin),(admin)
+12/03/21 - 21:40:37 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:40:37 - autorizando (admin),(admin)
+12/03/21 - 21:40:42 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:40:42 - autorizando (admin),(admin)
+12/03/21 - 21:40:47 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:40:47 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:40:47 - autorizando (admin),(admin)
+12/03/21 - 21:41:03 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:41:03 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:41:03 - autorizando (admin),(admin)
+12/03/21 - 21:44:11 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:44:11 - autorizando (admin),(admin)
+12/03/21 - 21:44:12 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:44:12 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:44:12 - autorizando (admin),(admin)
+12/03/21 - 21:44:37 - CARREGANDO SERVIIIICCCOOSSS
+12/03/21 - 21:44:37 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:44:37 - autorizando (admin),(admin)
+12/03/21 - 21:46:31 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:46:31 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:46:31 - autorizando (admin),(admin)
+12/03/21 - 21:47:54 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:47:54 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:47:54 - autorizando (admin),(admin)
+12/03/21 - 21:48:14 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:48:14 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:48:14 - autorizando (admin),(admin)
+12/03/21 - 21:48:22 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:48:22 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:48:22 - autorizando (admin),(admin)
+12/03/21 - 21:48:32 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:48:32 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:48:32 - autorizando (admin),(admin)
+12/03/21 - 21:48:34 - CARREGANDO FASES
+12/03/21 - 21:48:34 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:48:34 - autorizando (admin),(admin)
+12/03/21 - 21:48:34 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 21:48:34 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 21:48:34 - Valor de DATA VAR::: 
+12/03/21 - 21:48:34 - Valor de DATA VAR::: 0
+12/03/21 - 21:48:40 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:48:40 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:48:40 - autorizando (admin),(admin)
+12/03/21 - 21:48:43 - CARREGANDO FASES
+12/03/21 - 21:48:43 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:48:43 - autorizando (admin),(admin)
+12/03/21 - 21:48:43 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 21:48:43 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 21:48:43 - Valor de DATA VAR::: 
+12/03/21 - 21:48:43 - Valor de DATA VAR::: 0
+12/03/21 - 21:49:01 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:01 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:01 - autorizando (admin),(admin)
+12/03/21 - 21:49:04 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:04 - autorizando (admin),(admin)
+12/03/21 - 21:49:05 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:05 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:05 - autorizando (admin),(admin)
+12/03/21 - 21:49:08 - CARREGANDO FASES
+12/03/21 - 21:49:08 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:08 - autorizando (admin),(admin)
+12/03/21 - 21:49:08 - Valor de DATA VAR::: Confirmacao do pagamento
+12/03/21 - 21:49:08 - Valor de DATA VAR::: Aguardar a confirmacao do pagamento
+12/03/21 - 21:49:08 - Valor de DATA VAR::: 
+12/03/21 - 21:49:08 - Valor de DATA VAR::: 0
+12/03/21 - 21:49:10 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:10 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:10 - autorizando (admin),(admin)
+12/03/21 - 21:49:12 - CARREGANDO FASES
+12/03/21 - 21:49:12 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:12 - autorizando (admin),(admin)
+12/03/21 - 21:49:12 - Valor de DATA VAR::: Pagamento da Fatura
+12/03/21 - 21:49:12 - Valor de DATA VAR::: Pagamento do servico contratado
+12/03/21 - 21:49:12 - Valor de DATA VAR::: 
+12/03/21 - 21:49:12 - Valor de DATA VAR::: 1
+12/03/21 - 21:49:14 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:14 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:14 - autorizando (admin),(admin)
+12/03/21 - 21:49:15 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:15 - autorizando (admin),(admin)
+12/03/21 - 21:49:17 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:17 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:17 - autorizando (admin),(admin)
+12/03/21 - 21:49:19 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:19 - autorizando (admin),(admin)
+12/03/21 - 21:49:21 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:21 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:21 - autorizando (admin),(admin)
+12/03/21 - 21:49:23 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:23 - autorizando (admin),(admin)
+12/03/21 - 21:49:24 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:24 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:24 - autorizando (admin),(admin)
+12/03/21 - 21:49:26 - CARREGANDO FASES
+12/03/21 - 21:49:26 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:26 - autorizando (admin),(admin)
+12/03/21 - 21:49:26 - Valor de DATA VAR::: definir roteiro da viagem
+12/03/21 - 21:49:26 - Valor de DATA VAR::: 
+12/03/21 - 21:49:26 - Valor de DATA VAR::: 
+12/03/21 - 21:49:26 - Valor de DATA VAR::: 1
+12/03/21 - 21:49:28 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:28 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:28 - autorizando (admin),(admin)
+12/03/21 - 21:49:33 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:33 - autorizando (admin),(admin)
+12/03/21 - 21:49:35 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:49:35 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:49:35 - autorizando (admin),(admin)
+12/03/21 - 21:50:13 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:50:14 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:50:14 - autorizando (admin),(admin)
+12/03/21 - 21:50:25 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:50:25 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:50:25 - autorizando (admin),(admin)
+12/03/21 - 21:50:42 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:50:42 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:50:42 - autorizando (admin),(admin)
+12/03/21 - 21:51:12 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:51:12 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:51:12 - autorizando (admin),(admin)
+12/03/21 - 21:51:51 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:51:51 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:51:51 - autorizando (admin),(admin)
+12/03/21 - 21:51:55 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:51:55 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:51:55 - autorizando (admin),(admin)
+12/03/21 - 21:52:07 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:52:07 - autorizando (admin),(admin)
+12/03/21 - 21:52:09 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:52:09 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:52:09 - autorizando (admin),(admin)
+12/03/21 - 21:52:39 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:52:39 - autorizando (admin),(admin)
+12/03/21 - 21:52:40 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:52:40 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:52:40 - autorizando (admin),(admin)
+12/03/21 - 21:53:46 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:53:46 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:53:46 - autorizando (admin),(admin)
+12/03/21 - 21:53:54 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:53:54 - autorizando (admin),(admin)
+12/03/21 - 21:53:56 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:53:56 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:53:56 - autorizando (admin),(admin)
+12/03/21 - 21:56:59 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:56:59 - autorizando (admin),(admin)
+12/03/21 - 21:57:02 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:57:02 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:57:02 - autorizando (admin),(admin)
+12/03/21 - 21:57:11 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:57:11 - autorizando (admin),(admin)
+12/03/21 - 21:57:12 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:57:12 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:57:12 - autorizando (admin),(admin)
+12/03/21 - 21:58:35 - CARREGANDO FORM ADD SERVICOS
+12/03/21 - 21:58:35 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:58:35 - autorizando (admin),(admin)
+12/03/21 - 21:58:39 - CARREGANDO SERVICOS
+12/03/21 - 21:58:39 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:58:39 - autorizando (admin),(admin)
+12/03/21 - 21:58:43 - CARREGANDO SERVICOS
+12/03/21 - 21:58:43 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:58:43 - autorizando (admin),(admin)
+12/03/21 - 21:59:36 - CARREGANDO SERVICOS
+12/03/21 - 21:59:36 - conferindo permissoes (admin),(admin)
+12/03/21 - 21:59:36 - autorizando (admin),(admin)
+13/03/21 - 08:53:26 - redir configurado
+13/03/21 - 08:54:52 - Inciando rotina de login para user/pwd: roberto.stzutski@gmail.com / 32125 (  YzU1YWEwMmE0YTM0ODFiZTIwODc4ZTAyYzU5NmNkZmU9PT0=  )
+13/03/21 - 08:54:52 - Localizado um usuario... prosseguindo para o login
+13/03/21 - 08:54:52 - OK: Cadastro confirmado e Ativo!
+13/03/21 - 08:54:52 - setando variaveis da sessao...
+13/03/21 - 08:54:54 - conferindo permissoes (admin),(admin)
+13/03/21 - 08:54:54 - autorizando (admin),(admin)
+13/03/21 - 08:54:57 - CARREGANDO FORM ADD SERVICOS
+13/03/21 - 08:54:57 - conferindo permissoes (admin),(admin)
+13/03/21 - 08:54:57 - autorizando (admin),(admin)
+13/03/21 - 08:54:59 - CARREGANDO SERVICOS
+13/03/21 - 08:54:59 - conferindo permissoes (admin),(admin)
+13/03/21 - 08:54:59 - autorizando (admin),(admin)

@@ -1,7 +1,21 @@
 $( document ).ready(function() {
   // Handler for .ready() called.
 
+  /*re order*/
+  var order='';
+  $('.zorder').dragndrop({
+    onDrop: function( element, droppedElement ) {
+    $(".zorder").find("li").each(function(){ order += this.id + ','; });
+    let table   = $('#'+element.id).attr("data-table");
+    let idsrv   = $('#'+element.id).attr("data-ids");
+    let urlProc = $('#'+element.id).attr("data-url");
+    //console.log('!order '+order+' |table '+table+' |idc '+idsrv+' |url '+urlProc);
+    zorderUpdate(order,table,idsrv,urlProc);
+    order='';
+    }
+  });
 
+  /* end reorder*/          
   $("#tajax").click(function() {
       $.ajax({
         url: 'http://localhost/labs/ov/ajx?tipo=alert&msg=um-teste',
@@ -11,6 +25,28 @@ $( document ).ready(function() {
         }
       });
   });
+  
+  //ROTINA PARA HABILITAR E DESABILITAR FORMULARIOS
+  $('.onoff-form').click(function() {
+    let idForm  = $(this).attr("data-idform"); //to card
+    var delay   = 500; //1 seconds
+    setTimeout(function(){
+      if( $('#id_'+idForm).is(":checked") == true ){
+        $('#'+idForm+'_onoff').prop( "disabled", false );
+        $('.frmRemove_onoff').prop( "disabled", false );
+        //enable
+      }
+      else
+      {
+        $('#'+idForm+'_onoff').prop( "disabled", true );
+        $('.frmRemove_onoff').prop( "disabled", true );
+        //disable
+      }            
+       //your code to be executed after 1 seconds
+    },delay);    
+    
+  });
+
 
   //rotina de recuperacao de senha de acesso
   $(".btn-lstpwd").click(function() {
@@ -18,7 +54,6 @@ $( document ).ready(function() {
       if($('#recuperar').val()==''){
           alert('Informe o email do cadastro');
       }else{
-      
           let goUrl     = $(this).attr("data-go"); //to card
           var dataForm  = $( "#lostpwd" ).serialize();
           var request   = $.ajax({
@@ -30,7 +65,6 @@ $( document ).ready(function() {
                 eval(data);
               }
           }); 
-      
     }
 
   });
@@ -84,6 +118,25 @@ $( document ).ready(function() {
 
 
 });
+
+/*
+ * funcao para reordenar itens em uma tabela Z-ORDENADA
+ * */
+function zorderUpdate(reorder,tb,idsrv,urlProc){
+  //alert('go: reorder, table: '+tb+', ids: '+idsrv+', order: '+reorder+'');
+  
+  var request   = $.ajax({
+    url: urlProc,
+    method: "POST",
+    data: { go: 'reorder', table: tb, ids: idsrv, order: reorder},
+    dataType: "html",
+    success: function(data) {
+    eval(data);
+    }
+  }); 
+  
+}
+
 
 //~ function emlAlerts(x){
   //~ alert(x);

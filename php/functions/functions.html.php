@@ -1,4 +1,285 @@
 <?php
+
+
+/*
+ * switch button
+ * */
+function swbtn($text='',$class='',$idForm=''){
+  $id   = date('His').rand(0,255);
+  $tag  = '';
+  $tag .= '<div class="custom-control ctrl-left custom-switch onoff-form '.$class.'" data-idform="'.$idForm.'">'."\n";
+  $tag .= '<input type="checkbox" class="custom-control-input '.$idForm.'_ckb" id="id_'.$idForm.'">'."\n";
+  $tag .= '<label class="custom-control-label" for="id_'.$idForm.'">'.$text.'</label>'."\n";
+  $tag .= '</div><br clear="all" />'."\n";
+  return $tag;
+}
+
+
+/*
+ * simple buttom href
+ * */
+function btn($url,$text,$class='btn btn-primary'){
+  $tag = '<a href="'.$url.'" class="'.$class.'" role="button" aria-pressed="true">'.$text.'</a>';
+  return $tag;
+}
+
+
+/*
+ * simple buttom href
+ * */
+function btnRemove($uidRemove='',$tipoItem='',$msg='Confirma exclusão, operação não poderá ser desfeita!'){
+  $tag  = '<form class="frm-remove" id="frmRem" name="frmRem" method="POST" action="process" onsubmit="return confirm(\''.$msg.'\');">';
+  $tag .= '<fieldset class="frmRemove_onoff" disabled="disabled">';
+  $tag .= '<input type="hidden" id="tipoItem" name="tipoItem" value="'.$tipoItem.'" />';
+  $tag .= '<input type="hidden" id="uid2remove" name="uid2remove" value="'.$uidRemove.'" />';
+  $tag .= '<input type="hidden" id="do" name="do" value="remove" />';
+  $tag .= '<button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>';
+  $tag .= '</fieldset>';
+  $tag .= '</form>';
+  return $tag;
+}
+
+
+/*
+ * funcao para gerar campos dos formularios
+ * */
+$farg = array(
+'tipo'=>'',
+'id'=>'',
+'name'=>'',
+'class'=>'',
+'value'=>'',
+'label'=>'',
+'required'=>'',
+'placeholder'=>'',
+'helper'=>'',
+);
+
+function f_btn($tipo='button',$value='Salvar',$back=''){
+  $tag  = '<div class="form-group">'."\n";
+  if($back!=''){
+  if($back=='back'){$tag .= '<button type="button" class="btn btn-warning" onclick="javascript:history.back();"><i class="fas fa-arrow-left"></i> Retornar</button>'."\n";}
+  if($back!='back'){$tag .= '<a '.URLAPP.$back.' class="btn btn-warning" role="button"><i class="fas fa-arrow-left"></i> Retornar</a>'."\n";}}
+  $tag .= '<button type="'.$tipo.'" class="btn btn-primary">'.$value.'</button>'."\n";
+  $tag .= '</div>'."\n";
+  return $tag;
+}
+
+/*
+ * campo select
+ * */
+function f_select($label='',$id='',$name='',$opts=array(),$selected='',$req=false){
+  $tag = '';
+  if($label!='') {$label = '<label for="'.$id .'">'.$label.'</label>'."\n";}
+  if($req==true) {$req   = ' required="true"';}
+  if($name!='')  {$name  = ' name="'.$name.'"';}
+  if($id!='')    {$id    = ' id="'.$id.'"';}
+
+  $tag .= '<div class="form-group">'."\n";
+  $tag .= $label;
+  $tag .= '<select class="form-control"'.$id.$name.$req.'>'."\n";
+  $tag .= '<option value="" selected>Selecione</option>'."\n";
+  if(is_array($opts)&&count($opts)){
+  foreach ($opts as $key => $value) {
+  $slctd='';
+  if($selected==$key){$slctd = ' selected';}
+  $tag .= '<option value="'.$key.'"'.$slctd.'>'.$value.'</option>'."\n";}}
+  $tag .= '</select>'."\n";
+  $tag .= '</div>'."\n";
+  return $tag;
+}
+
+/*
+ * campo hidden
+ * */
+function f_hidden($name='',$value=''){
+  $tag = '<input type="hidden" id="'.$name.'" name="'.$name.'" value="'.$value.'" />'."\n";
+  return $tag;
+}
+
+/*
+ * campo text
+ * */
+function f_Text($label='',$id='',$name='',$value='',$placeholder='',$req=false,$mask='',$help=''){
+  if($help!='')         {$helpTag     = '<small id="'.$id.'" class="form-text text-muted">'.$help.'</small>';}
+  if($req==true)        {$req         = ' required="true"';}
+  if($label!='')        {$label       = '<label for="'.$id .'">'.$label.'</label>'."\n";}
+  if($placeholder!='')  {$placeholder = ' placeholder="'.$placeholder.'"';}
+  if($value!='')        {$value       = ' value="'.$value.'"';}
+  if($name!='')         {$name        = ' name="'.$name.'"';}
+  if($id!='')           {$id          = ' id="'.$id.'"';}
+  $tag = '';
+  $tag .= '<div class="form-group">'."\n";
+  $tag .= $label;
+  $tag .= '<input type="text" class="form-control"'.$id.$name.$placeholder.$value.$req.' '.$mask.' />'."\n";
+  if($help!=''){
+  $tag .= $helpTag;
+  }
+  $tag .= '</div>'."\n";
+  return $tag;
+}
+
+
+
+
+
+
+/*
+
+<ul class="list-group">
+<li class="list-group-item active">Cras justo odio</li>
+<li class="list-group-item">Dapibus ac facilisis in</li>
+<li class="list-group-item">Morbi leo risus</li>
+<li class="list-group-item">Porta ac consectetur ac</li>
+<li class="list-group-item">Vestibulum at eros</li>
+</ul>
+
+<div class="form-group">
+<label for="nomeCat">Nome Categoria</label>
+<input type="email" class="form-control" id="nomeCat" name="nomeCat" required="true" value="<?php echo popform($catData[0],'nome_categoria_servico','nomeCat');?>" placeholder="Nome ex: Visto Estudante USA">
+</div>
+
+
+
+
+
+
+
+
+
+*/
+
+
+
+
+/*
+ * funcao make card para criar tag de cards PANEL
+ * recebe 2 str (titulo do card e tipo HEADER ou FOOTER)
+ * */
+function mkCard($opt='header',$title='') {
+  $tag='';
+  if($opt=='header'){
+    $tag .= '<div class="card">';
+    if($title!=''){
+    $tag .= '<div class="card-header">'.$title.'</div>';
+    }
+    $tag .= '<div class="card-body">';
+  }
+    
+  if($opt=='footer'){
+    $tag .= '</div>';
+    $tag .= '</div>';
+  }
+  return $tag;
+}
+ 
+
+
+/*
+ * atalho funcao number format (formatacao de valores)
+ * */
+function moeda($str=''){
+  $valor = false;
+  if($str!=''){
+    $valor = number_format($str, 2, ',', '.');
+  }
+  return $valor;
+}
+
+
+
+
+/*
+ * funcao para preencher boxes do perfil do cliente (detalhes-cliente)
+ * */
+if (!function_exists('boxProfInfo')) {
+  function boxProfInfo($title='',$info=''){
+    $tag='';  
+    if($title!=''||$info!=''){
+      $tag .= '<div class="row">';
+      if($title!=''){$tag .= '<div class="col-md-12"><b>'.$title.'</b></div>';}
+      if($info!=''){$tag .= '<div class="col-md-12 ovfh">'.$info.'</div>';}
+      $tag .= '</div>'."\n";
+    }
+    return $tag;  
+  }
+}
+
+
+/*
+ * funcao para gerar tabelas HTML
+ * recebe array de argumentos:::
+ * $argsTb['data']  (array feech mysql)
+ * $argsTb['hf']    (linha com o header e footer)
+ * $argsTb['idx']   (indices da tabela usadas na tabela html)
+ * $argsTb['tpl']   (template das linhas da tabela)
+ * $argsTb['zreg']  (template para ZERO registros encontrados)
+ * */
+function mkTable($args=array()){
+  
+  $e=false;
+  if(!isSet($args['data'])) {$e=true; echo '<!-- ErrTB: data -->';}else{$data    =$args['data'];}
+  if(!isSet($args['hf']))   {$e=true; echo '<!-- ErrTB: hf -->';}  else{$hf      =$args['hf'];}
+  if(!isSet($args['idx']))  {$e=true; echo '<!-- ErrTB: idx -->';} else{$indexes =$args['idx'];}
+  if(!isSet($args['tpl']))  {$e=true; echo '<!-- ErrTB: tpl -->';} else{$template=$args['tpl'];}
+  
+  if($e){
+    $table = '<table><tr><td>ERRO NA DEFINICAO DA TABELA</td></tr></table>';  
+  }
+  else
+  {
+        
+      $lrow   = '';
+      //cria tabela html
+      $table  = '<table class="table table-bordered aTable">'."\n";
+      //monta header caso exista
+      if($hf!=''){$table .= "<thead class=\"thead-dark\">$hf</thead>\n";}
+
+      if(is_array($data) && count($data)>0){
+        
+        $table .='<tbody>';
+        
+                  //percorre o array com os dados da tabela
+                  for ($i = 0; $i < count($data); $i++)
+                  {
+                    $dtRow  = $data[$i];//dados da linha
+                    
+                    //caso indexes > 0 substitui valores nas celulas
+                    $tplRow = $template;
+                    if(count($indexes)>0){
+                      
+                      for ($x = 0; $x < count($indexes); $x++)
+                      {
+                        $id       = $indexes[$x];
+                        $search   = "{".$id."}";
+                        $replace  = arrayVar($dtRow,$id); 
+                        $tplRow   = str_replace($search,$replace,$tplRow);
+                      }
+                      $table .= $tplRow;
+                    
+                    }else{//caso nenhum valor de indice
+                      $table .= $template;
+                    }
+                  }
+                  
+        $table .='</tbody>';
+
+      }else{
+        
+        $table .= $args['zreg'];
+        
+      }
+      
+      //monta footer caso exista o header
+      if($hf!=''){$table .= "<tfoot class=\"thead-dark\">$hf</tfoot>\n";}
+      $table .= '</table>';
+  }
+
+  return $table;
+}
+
+
+//gera campo select de formulario com dados da tabela de dados
 function campoSelect($dados=array(),$campo='',$valor='',$selected=''){
 
   $option       = '<option value="">Selecione</option>'."\n";

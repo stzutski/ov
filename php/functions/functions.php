@@ -6,6 +6,95 @@ spl_autoload_register(function ($class) {
 
 
 
+/*
+ * funcao para repopular formularios de acordo com a origem dos dados
+ * ex recebe 2 indices o primeiro para retornos do db o segundo para
+ * retornos do post no formulario...
+ * se POST for falso busca em Array de Dados e utilizada em formularios
+ * de cadastros diversos onde caso ocorra erro no processamento os
+ * campos do form serao repopulados com o conteudo do ultimo post
+ * evitando a redigitacao
+ * */
+function popform($dbSrc=array(),$dbIndex='',$postIndex=''){
+  $res=false;
+  if(!postVar($postIndex)){//caso "NAO SEJA POST" retorna dados do array de dados
+    logsys("Valor de DATA VAR::: ".dataVar($dbSrc,$dbIndex));
+    if(dataVar($dbSrc,$dbIndex)!=''){$res = dataVar($dbSrc,$dbIndex);}else{$res = '0';}
+  }else{//caso "SEJA POST" retorna dados do POST
+    logsys("Valor de POST VAR::: ".postVar($postIndex));
+    if(postVar($postIndex)!=''){$res = postVar($postIndex);}else{$res = '0';}
+  }
+  return $res;
+}
+
+
+
+
+/*
+ * funcao para auxiliar no DEV realiza a listagem recursiva de arrays
+ * recebe array
+ * retorna str
+ * */
+function reList($arr){
+  if(is_array($arr) && count($arr)>0){
+    $str='';
+    foreach ($arr as $key => $value) {
+      if(is_array($value)){
+        reList($value);
+      }else{
+        echo "{$key} => {$value}<br />";
+      }
+    }
+  }
+}
+
+
+/*
+ * funcao para echoar N/A ou N/D no retorno de dados
+ * */
+ if(!function_exists('naNd')){
+  function naNd($str='',$def='N/D'){
+    if($str==''){return $def;}else{return $str;}
+  }
+}
+
+/*
+ * funcao auxiliar para dev (cria um box colapsavel) para dados brutos
+ * recebe str (header | footer) só para criar a tag
+ * */
+if (!function_exists('boxColapse')) {
+  function boxColapse($opt='header'){
+    $tag='';
+    $rand = rand(0,255).date('His');
+    if($opt=='header'){
+    $tag = '<button data-toggle="collapse" data-target="#col'.$rand.'" class="btn btn-warning btn-sm"><i class="fas fa-wrench"></i> DEV DATA</button>
+    <div id="col'.$rand.'" class="collapse">';
+    }
+    if($opt=='footer'){
+    $tag='</div>';
+    }
+    return $tag;
+  }
+}
+
+
+
+/*
+ * funcao para converter valor financeiro em FLOAT
+ * */
+function toFloat($str=''){
+  $valor = false;
+  if($str!=''){
+    $valor = str_replace('.','',$str);
+    $valor = str_replace(',','.',$valor);
+  }
+  return $valor;
+}
+
+
+/*
+ * funcao para montar lista com arrays recursivos
+ * */
 function ulArr($array){
 
   $tag="<ul>\n";

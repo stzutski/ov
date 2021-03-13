@@ -27,7 +27,16 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=-1
+current_page=3
+FILE_NAME_0=3512;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Frotas%2Fadmin.routes.php;0;2
+FILE_NAME_1=215;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fpaginas%2Fadm-fases-servico.php;0;2
+FILE_NAME_2=366;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fphp%2Fmodels%2Fadmin%2Ffases.admin.model.php;0;2
+FILE_NAME_3=791;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fforms%2Fform-add-fase-servico.php;0;2
+FILE_NAME_4=9778;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fphp%2Fclasses%2Fadmin%2Fservicos%2FServicos.php;0;2
+FILE_NAME_5=88;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fforms%2Fform-fase-servico.php;0;2
+FILE_NAME_6=173;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Ftab-list%2Flista-fases-servico.php;0;2
+FILE_NAME_7=1072;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fphp%2Fmodels%2Fpost.process.php;0;2
+FILE_NAME_8=204;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fpaginas%2Fadd-fases-servico.php;0;2
 
 [VTE]
 last_dir=/home/robertors

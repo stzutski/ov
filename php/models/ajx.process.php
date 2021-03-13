@@ -15,6 +15,13 @@ if(postVar('do')=='reconf'){
   include_once('php/models/site/login.site.model.php');
 }
 
+//rotina para atualizar a ordem de itens em uma tabela Z-ORDENADA
+if(postVar('do')=='reorder' || postVar('go')=='reorder'){
+  logsys("REORDERING CALL:::");
+  include_once('php/models/admin/reorder.admin.model.php');  
+}
+
+
 
 $tipo='';
 $msg='';

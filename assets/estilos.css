@@ -1,6 +1,10 @@
 *{padding:0px;margin:0px;}
 .navbar{width:20%;float:left;background:#333;color:#fff;}
-.pagebody{width:80%;float:left;background:#f4f4f4;color:#000;padding:10px;}
+.pagebody{width:79%;float:left;background:#fff;color:#000;padding:10px;}
+
+
+
+
 form{
 display:block;
 max-width: 300px;
@@ -11,6 +15,33 @@ ul.mainNav li{
 line-height:30px;
 list-style:none;
 }
+
+
+/* tabelas */
+.aTable{width:98%!important;margin:0px auto!important;}
+
+/*formularios internos*/
+form.fmr-int{max-width:95%;margin:0px auto;border:1px #ccc solid;border-radius:8px;padding:20px;text-align:left;}
+
+/* form e botao para remover registros */
+.frm-remove{
+max-width:300px;
+float: right;
+}
+
+
+/*
+ * switch
+ * */
+.ctrl-left{
+  border: 0px #000 solid;
+  display: block;
+  float: right;
+  clear: both;
+  width: 200px;
+  float: right;
+}
+
 
 .mainNav a{color:#fff;}
 
@@ -74,3 +105,39 @@ margin-left:20px!important;
 .mgl-20{
 margin-left:20px!important;
 }
+
+
+
+
+
+.nav-item a{color:#495057!important;}
+
+
+/*espacamento boxes pagina detalhes do cliente*/
+.row-det-cli > .col,
+.row-det-cli > [class*="col-"] {
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+}
+/*titulo cardHeader detalhes do cliente*/
+.detCli{text-align:center;font-weight:bold;margin-bottom:0px!important;}
+.iprof{padding-top:10px!important;}
+.iprof{margin-bottom:10px!important;}
+
+.ovfh{min-width:146px;overflow-x:hidden;}
+
+/*
+ * espacamento e bordas box detalhes do cliente
+ * */
+
+.iprof > [class*="row"]{border-bottom:1px #000 dashed!important;padding:5px 0px!important;font-size:10pt;}
+.iprof > [class*="row"] > [class*="col-"] {padding:0px 0px;}
+.bxCli{margin-bottom:10px!important;}
+
+
+
+/*
+ * BOTOES DEV
+ * */
+.btn-dev{background:#F6FF00;color:#000;border:2px #000 solid;border-radius:5px;padding:5px;outline:none;}

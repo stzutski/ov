@@ -31,4 +31,25 @@ if(postVar('do')=='saveorder'){
   
 }
 
+if(postVar('do')=='saveCat'){
+  
+  //model com as rotinas atualizar servicos da empresa
+  include_once('php/models/admin/servicos.admin.model.php');  
+  
+}
+
+if(postVar('do')=='saveFase'){
+  
+  //model com as rotinas atualizar servicos da empresa
+  include_once('php/models/admin/fases.admin.model.php');  
+  
+}
+
+if(postVar('do')=='saveService'){
+  
+  //model com as rotinas atualizar servicos da empresa
+  include_once('php/models/admin/servicos.admin.model.php');  
+  
+}
+
 ?>
