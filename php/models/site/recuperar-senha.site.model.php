@@ -10,7 +10,6 @@ use \site\CadUserCli;
 if($_POST){
   //recebe os dados
   $_emailUsuario  = addslashes(trim($_POST['emladdr']));
-  logsys("inciando processo de recuperacao de senha do usuario ($_emailUsuario)");
   
   $cadUser    = new CadUserCli();
   
@@ -32,7 +31,6 @@ if($_POST){
       $_userData = $res['userdata'];
       $_userHash = $res['urlHash'];
       
-       logsys("processo de recuperacao PARECE BEM...");
       $url_da_recuperacao = URLAPP.'confirma-recuperacao/'.$_userHash;
           
       $message  = "Prezado(a) usuário(a).";
@@ -51,10 +49,8 @@ if($_POST){
     }
     
     if($resMail){
-      logsys("Email de recuperacao enviado com sucesso!");
       echo 'alert("Confira sua caixa de entrada")';
     }else{
-      logsys("Erro no envio do email de recuperacao!");
       echo 'alert("Erro na recuperacao da senha")';
     }
   
@@ -73,19 +69,16 @@ if($_POST){
 //caso codigo HASH tenha sido recebido processa a parte final da recuperacao da senha
 if(isSet($codRecuperacao) && $codRecuperacao!=''){
   
-  logsys("INICIADO PROCESSO DE GERACAO DE NOVA SENHA");
   
   
   //CONSULTA VALIDADE DO HASH (CASO EXISTA E SEJA VALIDO) PROCEDE 
   $chkHash    = new CadUserCli();
   $idUsuario  = $chkHash->getUserByHash($codRecuperacao);//CONFERE O HASH SE OK (RETORNA O ID DO USUARIO)
   
-  logsys("CONFERINDO HASH ($idUsuario)");
   
   //SE HASH VALIDO
   if($idUsuario>0){
     
-    logsys("HASH valido.... prosseguindo");
     
     //GERA UMA SENHA TEMPORARIA
     $pwdTemp    = genPwd();//SENHA TEMPORARIA TXT PLANO

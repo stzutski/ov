@@ -20,6 +20,7 @@ for ($i = 0; $i < count($_listaUsers); $i++)
   
 }*/
 
+
 $argsTb['data'] = $_listaUsers;
 $argsTb['hf']   = '<tr><th width="50">ID</th><th>Nome</th><th width="400">Email</th></tr>';
 $argsTb['idx']  = array('id_cliente','nome_cliente','sobrenome_cliente','email_usuario');

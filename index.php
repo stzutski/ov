@@ -1,24 +1,51 @@
 <?php 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+//REGISTRA SESSAO
+session_start();
+
 include 'config.php';
 
 use \Slim\Slim;
 $app = new \Slim\Slim();
-//$app->config('debug', true);
 
-/*
-  $app->get('/feed', function() use ($app) {
-      $app->redirect('http://localhost/labs/ov/cadastro');
-  });
-
-  $app->get('/admin', function () {
-      $incBody='views/restrictArea/admin/forms/teste.form.php';
-      include('views/admin.page.tpl.php');
-  });
-*/
- 
 
 
   require_once('rotas/system.routes.php');////rotas de sistema
+/*
+if(decode( sessionVar('_uL') ) == 'cliente' ){
+
+  $app->get('/', function () {  
+  $incBody='views/area-restrita/cliente/cliente.dashboard.php';
+  include 'views/cliente.page.tpl.php';
+  }
+  
+}
+elseif(decode( sessionVar('_uL') ) == 'admin' ){
+  
+  $app->get('/', function () {  
+  $incBody='views/area-restrita/admin/admin.dashboard.php';
+  include 'views/admin.page.tpl.php';
+  }  
+  
+}
+elseif(decode( sessionVar('_uL') ) == 'master' ){
+  
+  $app->get('/', function () {  
+  $incBody='views/area-restrita/master/master.dashboard.php';
+  include 'views/master.page.tpl.php';
+  }
+  
+}else{
+  
+  $app->get('/', function () {  
+  include 'views/login.page.php';
+  }
+
+}*/
+
+
 
 
   $app->get('/', function () {
@@ -36,7 +63,7 @@ $app = new \Slim\Slim();
       include 'views/master.page.tpl.php';
     }
     else{
-      include 'views/login.page.php';
+      //include 'views/login.page.php';
     }
     
   });

@@ -2,6 +2,97 @@
 
 
 /*
+ * funcao para gerar campos select JUMP to recebe array com dados
+  $args['data']; //data fetch mysql
+  $args['idOption']; //coluna id na tabela
+  $args['valueOption']; //coluna value da tabela
+  $args['selected'];//id selecionado
+*/
+function mkSelectDB_RN($args=array()){
+  
+  $_dataArr   = $args['data'];
+  $_idOption  = $args['idOption'];
+  $_vaOption  = $args['valueOption'];
+  $_selected  = $args['selected'];
+
+  $_optArr=array();
+  $_tag='';
+  $_selected = '';
+  if(count($_dataServicos)>0){
+      for ($i = 0; $i < count($_dataServicos); $i++)
+      {
+        $_dataSrc       = $_dataServicos[$i];
+        $id             = $_dataSrc[$_idOption];
+        $nm             = $_dataSrc[$_vaOption];
+        $selectThis     = '';
+        if($_selected==$id){$selectThis=' selected';}
+        $_tag          .= '<option value="'.$id.''.$selectThis.'">'.$nm.'</option>'."\n";
+      }
+  }
+  
+  return $_tag;
+}
+
+
+
+/*
+ * funcao para montar LISTA LI nas regras do negócio
+ * recebe $args (array de dados)
+ * 
+ * $args['data'] //array fetch mysql
+ * $args['vals'] //array com a lista de colunas da tabela mysql utilizadas
+ * $args['tlst'] //template da linha LI
+ * 
+ * retorna STR com tags: ul > li
+ * 
+ * */
+function listaLIFromDB_Regras($args=array()){
+  
+  $_dataDB  = $args['data'];
+  $_vals    = $args['vals'];
+
+
+
+  $_data    = array();
+  $_template= $args['tlst'];
+  $_tag     = '<ul class="list-group">';
+  
+  if(count($_dataDB)>0){
+      for ($i = 0; $i < count($_dataDB); $i++)
+      {
+        $_dataRow       = $_dataDB[$i];
+        $_strTemplate   = $_template;
+        if(is_array($_vals)&&count($_vals)>0){
+            foreach ($_vals as $value) {
+              $_strTemplate = str_replace('{'.$value.'}',$_dataRow[$value],$_strTemplate);
+            }
+        $_tag .= $_strTemplate;
+        }
+      }
+  }  
+  
+  $_tag    .= '</ul>';  
+  
+  return $_tag;
+  
+}
+
+
+/*
+ * funcao para BOX de ALERTAS
+ * */
+function alertBox($text='',$class='primary'){
+  $tag = '';
+  if($text!=''){  
+    $tag .= '<div class="alert alert-'.$class.'" role="alert">'."\n";
+    $tag .= $text."\n";
+    $tag .= '</div>'."\n";
+  }
+  return $tag;
+}
+
+
+/*
  * switch button
  * */
 function swbtn($text='',$class='',$idForm=''){
@@ -27,11 +118,12 @@ function btn($url,$text,$class='btn btn-primary'){
 /*
  * simple buttom href
  * */
-function btnRemove($uidRemove='',$tipoItem='',$msg='Confirma exclusão, operação não poderá ser desfeita!'){
+function btnRemove($uidRemove='',$tipoItem='',$bkt='',$msg='Confirma exclusão, operação não poderá ser desfeita!'){
   $tag  = '<form class="frm-remove" id="frmRem" name="frmRem" method="POST" action="process" onsubmit="return confirm(\''.$msg.'\');">';
   $tag .= '<fieldset class="frmRemove_onoff" disabled="disabled">';
   $tag .= '<input type="hidden" id="tipoItem" name="tipoItem" value="'.$tipoItem.'" />';
   $tag .= '<input type="hidden" id="uid2remove" name="uid2remove" value="'.$uidRemove.'" />';
+  $tag .= '<input type="hidden" id="bkt" name="bkt" value="'.$bkt.'" />';
   $tag .= '<input type="hidden" id="do" name="do" value="remove" />';
   $tag .= '<button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>';
   $tag .= '</fieldset>';
@@ -68,23 +160,25 @@ function f_btn($tipo='button',$value='Salvar',$back=''){
 /*
  * campo select
  * */
-function f_select($label='',$id='',$name='',$opts=array(),$selected='',$req=false){
+function f_select($label='',$id='',$name='',$opts=array(),$selected='',$req=false,$help='',$class='',$atts=''){
   $tag = '';
-  if($label!='') {$label = '<label for="'.$id .'">'.$label.'</label>'."\n";}
-  if($req==true) {$req   = ' required="true"';}
-  if($name!='')  {$name  = ' name="'.$name.'"';}
-  if($id!='')    {$id    = ' id="'.$id.'"';}
+  if($label!='') {$label    = '<label for="'.$id .'">'.$label.'</label>'."\n";}
+  if($help!='')  {$help     = '<small id="'.$id.'" class="form-text text-muted">'.$help.'</small>';}
+  if($req==true) {$req      = ' required="true"';}
+  if($name!='')  {$name     = ' name="'.$name.'"';}
+  if($id!='')    {$id       = ' id="'.$id.'"';}
 
   $tag .= '<div class="form-group">'."\n";
   $tag .= $label;
-  $tag .= '<select class="form-control"'.$id.$name.$req.'>'."\n";
-  $tag .= '<option value="" selected>Selecione</option>'."\n";
+  $tag .= '<select class="form-control '.$class.'" '.$atts.''.$id.$name.$req.'>'."\n";
+  $tag .= '<option value="">Selecione</option>'."\n";
   if(is_array($opts)&&count($opts)){
   foreach ($opts as $key => $value) {
   $slctd='';
   if($selected==$key){$slctd = ' selected';}
   $tag .= '<option value="'.$key.'"'.$slctd.'>'.$value.'</option>'."\n";}}
   $tag .= '</select>'."\n";
+  $tag .= $help."\n";
   $tag .= '</div>'."\n";
   return $tag;
 }
@@ -112,6 +206,28 @@ function f_Text($label='',$id='',$name='',$value='',$placeholder='',$req=false,$
   $tag .= '<div class="form-group">'."\n";
   $tag .= $label;
   $tag .= '<input type="text" class="form-control"'.$id.$name.$placeholder.$value.$req.' '.$mask.' />'."\n";
+  if($help!=''){
+  $tag .= $helpTag;
+  }
+  $tag .= '</div>'."\n";
+  return $tag;
+}
+
+/*
+ * campo número
+ * */
+function f_Number($label='',$id='',$name='',$value='',$placeholder='',$req=false,$mask='',$help=''){
+  if($help!='')         {$helpTag     = '<small id="'.$id.'" class="form-text text-muted">'.$help.'</small>';}
+  if($req==true)        {$req         = ' required="true"';}
+  if($label!='')        {$label       = '<label for="'.$id .'">'.$label.'</label>'."\n";}
+  if($placeholder!='')  {$placeholder = ' placeholder="'.$placeholder.'"';}
+  if($value!='')        {$value       = ' value="'.$value.'"';}
+  if($name!='')         {$name        = ' name="'.$name.'"';}
+  if($id!='')           {$id          = ' id="'.$id.'"';}
+  $tag = '';
+  $tag .= '<div class="form-group">'."\n";
+  $tag .= $label;
+  $tag .= '<input type="number" class="form-control"'.$id.$name.$placeholder.$value.$req.' '.$mask.' />'."\n";
   if($help!=''){
   $tag .= $helpTag;
   }
@@ -156,7 +272,7 @@ function f_Text($label='',$id='',$name='',$value='',$placeholder='',$req=false,$
  * funcao make card para criar tag de cards PANEL
  * recebe 2 str (titulo do card e tipo HEADER ou FOOTER)
  * */
-function mkCard($opt='header',$title='') {
+function mkCard($opt='header',$title='',$ftcard='') {
   $tag='';
   if($opt=='header'){
     $tag .= '<div class="card">';
@@ -168,6 +284,9 @@ function mkCard($opt='header',$title='') {
     
   if($opt=='footer'){
     $tag .= '</div>';
+    if($ftcard!=''){
+      $tag .= $ftcard;
+    }
     $tag .= '</div>';
   }
   return $tag;
@@ -214,6 +333,7 @@ if (!function_exists('boxProfInfo')) {
  * $argsTb['idx']   (indices da tabela usadas na tabela html)
  * $argsTb['tpl']   (template das linhas da tabela)
  * $argsTb['zreg']  (template para ZERO registros encontrados)
+ * $argsTb['tbat']  (atributos extras para a tag <table>)
  * */
 function mkTable($args=array()){
   
@@ -222,6 +342,7 @@ function mkTable($args=array()){
   if(!isSet($args['hf']))   {$e=true; echo '<!-- ErrTB: hf -->';}  else{$hf      =$args['hf'];}
   if(!isSet($args['idx']))  {$e=true; echo '<!-- ErrTB: idx -->';} else{$indexes =$args['idx'];}
   if(!isSet($args['tpl']))  {$e=true; echo '<!-- ErrTB: tpl -->';} else{$template=$args['tpl'];}
+  //if(!isSet($args['tbat'])) {$e=true; echo '<!-- ErrTB: tpl -->';} else{$template=$args['tbat'];}
   
   if($e){
     $table = '<table><tr><td>ERRO NA DEFINICAO DA TABELA</td></tr></table>';  
@@ -231,9 +352,9 @@ function mkTable($args=array()){
         
       $lrow   = '';
       //cria tabela html
-      $table  = '<table class="table table-bordered aTable">'."\n";
+      $table  = '<table '.arrayVar($args,'tbat').' id="dttb" class="table table-hover dtTable">'."\n";
       //monta header caso exista
-      if($hf!=''){$table .= "<thead class=\"thead-dark\">$hf</thead>\n";}
+      if($hf!=''){$table .= "<thead>$hf</thead>\n";}
 
       if(is_array($data) && count($data)>0){
         
@@ -271,7 +392,7 @@ function mkTable($args=array()){
       }
       
       //monta footer caso exista o header
-      if($hf!=''){$table .= "<tfoot class=\"thead-dark\">$hf</tfoot>\n";}
+      if($hf!=''){$table .= "<tfoot>$hf</tfoot>\n";}
       $table .= '</table>';
   }
 

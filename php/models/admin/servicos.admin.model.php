@@ -8,7 +8,9 @@ use admin\servicos\Servicos;
 //rotinas de processamento de servicos
 if(postVar('do')=='saveCat'){
   
+  
   if(postVar('uid')!='' && postVar('uid')!='0'){
+    
     $sql = new Sql();
     $res = $sql->query('UPDATE servicos_categorias SET
                         nome_categoria_servico = :nome_categoria_servico,
@@ -24,9 +26,13 @@ if(postVar('do')=='saveCat'){
                         ':id_categoria'             =>  postVar('uid'),
                         ':id_empresa'               =>  decode(sessionVar('_iE'))));
     
-    if($res>0){
+    if(!is_array($res)){
       $_SESSION['_msg'] = 'Processado Com Sucesso';
-      $app->redirect(URLAPP .'cat-servicos/' . postVar('uid'));
+      if(postVar('bkt')!=''){
+      $app->redirect(URLAPP .'adm-servicos/cat-serv');
+      }else{
+      $app->redirect(URLAPP);
+      }
     }
     
   }elseif(postVar('uid')=='0'){
@@ -47,7 +53,11 @@ if(postVar('do')=='saveCat'){
     
     if($res>0){
       $_SESSION['_msg'] = 'Processado Com Sucesso';
-      $app->redirect(URLAPP .'cat-servicos/' . $res);
+      if(postVar('bkt')!=''){
+      $app->redirect(URLAPP .'adm-servicos/cat-serv');
+      }else{
+      $app->redirect(URLAPP);
+      }
     }
     
   }
@@ -55,6 +65,23 @@ if(postVar('do')=='saveCat'){
   
 }elseif(postVar('do')=='saveService'){
   
+  
+  
+  $servico  = new Servicos();
+  $res      = $servico->saveService( postVar('uid') );
+  
+    if($res>0){
+      $_SESSION['_msg'] = 'Processado Com Sucesso';
+      if(postVar('bkt')!=''){
+      $app->redirect(URLAPP .postVar('bkt').postVar('id_categoria'));
+      }else{
+      $app->redirect(URLAPP);
+      }
+    }  
+  
+  
+  
+  /*
   if(postVar('uid')!='' && postVar('uid')!='0'){
     $sql = new Sql();
     $res = $sql->query('UPDATE servicos SET
@@ -71,7 +98,7 @@ if(postVar('do')=='saveCat'){
                         ':status_servico'=>postVar('statusServ'),
                         ':id_servico'=>postVar('uid')));
     
-    if($res>=0){
+    if(!is_array($res)){
       $_SESSION['_msg'] = 'Processado Com Sucesso';
       $app->redirect(URLAPP .'cat-servicos/' . postVar('uidCategoria'));//cat-servicos/
     }
@@ -98,27 +125,22 @@ if(postVar('do')=='saveCat'){
                         ':preco_servico'      =>toFloat(postVar('precoServico')),
                         ':status_servico'     =>postVar('statusServ')));
     
-    if($res>0){
+    if(!is_array($res)){
       $_SESSION['_msg'] = 'Processado Com Sucesso';
       $app->redirect(URLAPP .'cat-servicos/' . postVar('uidCategoria'));
     }
     
-  }
+  }*/
   
 }else{
 
   $_servicos      = new Servicos();
   $_dbi           = new Dbi();
   $dbi_serv       = $_dbi->dbi_servicos();
-  logsys("array servicos: ".json_encode($dbi_serv));
   
   $listaServicos  = $_servicos->getListServices();
 
   $titulo_servicos = 'eita';
-
-
-
-
 
 }
 ?>

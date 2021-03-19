@@ -2,18 +2,41 @@ $( document ).ready(function() {
   // Handler for .ready() called.
 
   /*re order*/
-  var order='';
-  $('.zorder').dragndrop({
-    onDrop: function( element, droppedElement ) {
-    $(".zorder").find("li").each(function(){ order += this.id + ','; });
-    let table   = $('#'+element.id).attr("data-table");
-    let idsrv   = $('#'+element.id).attr("data-ids");
-    let urlProc = $('#'+element.id).attr("data-url");
-    //console.log('!order '+order+' |table '+table+' |idc '+idsrv+' |url '+urlProc);
-    zorderUpdate(order,table,idsrv,urlProc);
-    order='';
-    }
-  });
+  if($('.zorder').length){
+    var order='';
+    $('.zorder').dragndrop({
+      onDrop: function( element, droppedElement ) {
+      $(".zorder").find("li").each(function(){ order += this.id + ','; });
+      let table   = $('#'+element.id).attr("data-table");
+      let idsrv   = $('#'+element.id).attr("data-ids");
+      let urlProc = $('#'+element.id).attr("data-url");
+      //console.log('!order '+order+' |table '+table+' |idc '+idsrv+' |url '+urlProc);
+      zorderUpdate(order,table,idsrv,urlProc);
+      order='';
+      }
+    });
+  }
+  
+
+  if($('.zorderE').length){
+    var order='';
+    $('.zorderE').dragndrop({
+      onDrop: function( element, droppedElement ) {
+      $(".zorderE").find("li").each(function(){ order += this.id + ','; });
+      let table   = $('#'+element.id).attr("data-table");
+      let idsrv   = $('#'+element.id).attr("data-ids");
+      let urlProc = $('#'+element.id).attr("data-url");
+      //console.log('!order '+order+' |table '+table+' |idc '+idsrv+' |url '+urlProc);
+      zorderUpdate(order,table,idsrv,urlProc);
+      order='';
+      }
+    });
+  }
+
+
+  
+  
+  
 
   /* end reorder*/          
   $("#tajax").click(function() {
@@ -46,6 +69,16 @@ $( document ).ready(function() {
     },delay);    
     
   });
+
+
+  /*rotina select Jump*/
+  $( ".jumpTo" ).change(function() {
+    let goUrl       = $(this).attr("data-go"); //to card
+    let uid         = $(this).val();
+    console.log( goUrl+uid );
+    window.location = goUrl+uid;
+  });
+
 
 
   //rotina de recuperacao de senha de acesso

@@ -41,13 +41,11 @@ if(postVar('do')=='reconf'){
     }else{
       
       $emailUser = postVar('emladdr');    
-      logsys("CONFERINDO EMAIL: $emailUser");
       
       //CONSULTA EMAIL NA TABELA DE USUARIOS
       $usuario  = new CadUserCli();
       $userData = $usuario->getUserByEmail($emailUser);
       
-      logsys("RECUPERANDO DADOS DO USUARIO: $emailUser = ".json_encode($userData));
       
       //CHECA NOVAMENTE SE DADOS REALMENTE CONFEREM
       if($userData['email_usuario']!=$emailUser){
@@ -58,7 +56,6 @@ if(postVar('do')=='reconf'){
       //CASO DADOS OK ENTÃO RE-ENVIA MSG DE ATIVACAO DO CADASTRO
       }elseif($userData['email_usuario']==$emailUser){
         
-        logsys("O EMAIL: $emailUser Consta no sistema... configurando msg de email:");
         
         $cod_conf_usuario = $userData['cod_ativacao_usuario'];
 
@@ -78,12 +75,10 @@ if(postVar('do')=='reconf'){
         $email    = array('to'=>$emailUser, 'from'=>MAILFROM, 'subject'=>'Confirmação do Cadastro', 'message'=>$message);
         
         if(sndMail($email)){
-          logsys("EMAIL ENVIADO COM SUCESSO PARA: $emailUser");
           //echo 1;//CASO EMAIL ENVIADO COM SUCESSO RETORNA 1
           echo 'alert("Confira sua caixa de entrada!")';
         
         }else{
-          logsys("OCORREU UM ERRO NO ENVIO DO EMAIL PARA: $emailUser");
           //echo 0;//CASO ERRO NO ENVIO RETORNA 0
           echo 'alert("Ocorreu um erro no envio\ntente novamente mais tarde")';
         }

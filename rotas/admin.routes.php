@@ -8,6 +8,13 @@
       include 'views/cliente.page.tpl.php';
     });
       
+    //ADMINISTRACAO DAS REGRAS DO NEGOCIO
+    $app->get('/adm-servicos/:moduloregra', function ($moduloregra) {
+      App::chkPerm(decode( sessionVar('_uL') ),'admin');
+      $incBody = RESTRITA_ADMIN . 'paginas/adm-servicos.php';    
+      include 'views/admin.page.tpl.php';
+    });
+      
     //FORM UPD DADOS DO ADMINISTRADOR
     $app->get('/perfil-admin', function () {
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
@@ -75,7 +82,6 @@
 
     //CONFIGURAR FASES DO SERVICO
     $app->get('/adm-fases-servico/servico/:idServico', function ($idServico) {
-      logsys("CARREGANDO FORM ADD SERVICOS");
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
       $incBody = RESTRITA_ADMIN . 'paginas/adm-fases-servico.php';  
       include ('php/models/admin/fases.admin.model.php');  
@@ -84,28 +90,38 @@
 
     //adicionar nova FASE ao SERVICO
     $app->get('/add-fases-servico/servico/:idServico', function ($idServico) {
-      logsys("CARREGANDO SERVICOS");
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
-      $incBody = RESTRITA_ADMIN . 'paginas/add-fases-servico.php';  
+      // REMOVER $incBody = RESTRITA_ADMIN . 'paginas/add-fases-servico.php';  
+      $incBody = RESTRITA_ADMIN . 'forms/form-add-fase-servico.php';  
+      include ('php/models/admin/fases.admin.model.php');  
+      include 'views/admin.page.tpl.php';
+    });    
+    //adicionar nova ETAPA para FASE do SERVICO
+    $app->get('/add-etapa-fase/fase/:idFase', function ($idFase) {
+      App::chkPerm(decode( sessionVar('_uL') ),'admin');
+      // REMOVER $incBody = RESTRITA_ADMIN . 'paginas/add-etapas-servico.php';  
+      $incBody = RESTRITA_ADMIN . 'forms/form-add-etapa-fase.php';  
       include ('php/models/admin/fases.admin.model.php');  
       include 'views/admin.page.tpl.php';
     });    
 
 
     $app->get('/adm-fases-servico/fase/:idFase', function ($idFase) {
-      logsys("CARREGANDO FASES");
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
       $incBody = RESTRITA_ADMIN . 'paginas/adm-fases-servico.php';  
       include ('php/models/admin/fases.admin.model.php');  
       include 'views/admin.page.tpl.php';
     });
+    
+    //FORM ALTERAR ETAPA CADASTRADA
     $app->get('/adm-fases-servico/etapa/:idEtapa', function ($idEtapa) {
-      logsys("CARREGANDO FASES");
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
       $incBody = RESTRITA_ADMIN . 'paginas/adm-fases-servico.php';  
-      include ('php/models/admin/fases.admin.model.php');  
+      include ('php/models/admin/etapas.admin.model.php');  
       include 'views/admin.page.tpl.php';
     });
+    
+    
     $app->get('/adm-fases-servico', function () {
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
       $incBody = RESTRITA_ADMIN . 'paginas/adm-fases-servico.php';  

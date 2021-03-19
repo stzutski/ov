@@ -1,6 +1,18 @@
 <?php 
 //$app->redirect('http://localhost/labs/ov/resultado/'.$result);
 
+
+//ROTINAS DE EXCLUSAO DE REGISTROS
+if(postVar('do')=='remove'){
+
+  $id2Remove  = postVar('uid2remove');
+  $tipoItem   = postVar('tipoItem');
+  
+  //REMOVER ETAPA
+  include_once('php/models/admin/delete.admin.model.php');
+
+}
+
 if(postVar('do')=='login'){
 
   //model com as rotinas de recuperacao de senha de acesso
@@ -42,6 +54,13 @@ if(postVar('do')=='saveFase'){
   
   //model com as rotinas atualizar servicos da empresa
   include_once('php/models/admin/fases.admin.model.php');  
+  
+}
+
+if(postVar('do')=='saveEtapa'){
+  
+  //model com as rotinas atualizar servicos da empresa
+  include_once('php/models/admin/etapas.admin.model.php');  
   
 }
 

@@ -4,7 +4,7 @@
   //btn(URLAPP.'add-servico/categoria/'.$idCategoria.'','+Servico para esta categoria')
   
   //lista ETAPAS DA FASE do servico
-  echo mkCard('header','<h4><a href="adm-fases-servico">Etapas</a> '.btn(URLAPP.'add-servico/categoria/'.$idFase.'','+etapa','btn btn-primary').'</h4>');
+  echo mkCard('header','<h4>Etapas '.btn(URLAPP.'add-etapa-fase/fase/'.$idFase.'','+etapa','btn btn-primary').'</h4>');
 
   /*
   id_etapa

@@ -1,6 +1,5 @@
 <?php 
-//REGISTRA SESSAO
-session_start();
+
 
 //CONFIGURACOES GLOBAIS
 define('URLAPP','http://localhost/labs/ov/');
@@ -10,6 +9,9 @@ define('MAILSUPORTE','suporte@obavisto.com.br');
 //define('MAILFROM','obv2@actoweb.com.br');
 define('MAILFROM','website.demonstracao@gmail.com');
 define('LOGOMAIL','https://obavisto2.actoweb.com.br/assets/images/logo/logo-login.png');
+define('ADMINVIEWS','views/area-restrita/admin/');
+define('CLIENTEVIEWS','views/area-restrita/cliente/');
+define('MASTERVIEWS','views/area-restrita/master/');
 
 if(isSet($_GET['u'])&&$_GET['u']=='logout'){
     session_destroy();
@@ -26,7 +28,6 @@ require_once('php/functions/functions.html.php');
 if(!isSet($_SESSION['_uL'])){
     $_SESSION['_uL']='';
     header('location:'.URLAPP . '/logout');
-    logsys('redir configurado');
     exit;
 }
 

@@ -236,7 +236,6 @@ class CadUserCli{
         //caso nada encontrado retorna ZERO
         if(is_array($res) && count($res)==0){
           
-          logsys("End de email não encontrado na tabela usuarios");
           $ret = 0;//email nao encontrado
         
         }
@@ -249,7 +248,6 @@ class CadUserCli{
           $_userData['hash']      = md5(  base64_encode($dataUser['id_usuario'])  );
           $_userData['hrlimit']   = date("d/m/Y H:i:s", strtotime("+1 hours"));
           
-          logsys("End de email localizado na tab usuarios");
           
           $paramsRecovery = array(
                               ':id_usuario'=>$res[0]['id_usuario'],
@@ -257,7 +255,6 @@ class CadUserCli{
                               ':dt_register'=>$_linkTtime
                               );
           
-          logsys("Bindo do HASH: ".json_encode($paramsRecovery));
           
           //gera cadastro na tabela de recuperacao de senha
           $res = $sql->query('INSERT INTO pwd_recovery (
@@ -269,17 +266,14 @@ class CadUserCli{
                               :hash_recovery, 
                               :dt_register )',$paramsRecovery);
           
-          logsys("numero de linhas afetadas: (".json_encode($res).")");
           
           if($res>1){//se hash anotado corretamente retorna a url para redirect
-            logsys("Hash registrado com sucesso");
             
             $user_key     = md5(base64_encode($dataUser['id_usuario']));
             $user_uid     = $dataUser['id_usuario'];
             $_url         = "$user_key";//hash (IDusuario)/(HASH)
             $ret          = $_url;
             
-            logsys("Hash registrado com sucesso retornando a url: $ret");
             
             $_userData['userdata']  = $_userData;
             $_userData['urlHash']   = $ret;
@@ -290,7 +284,6 @@ class CadUserCli{
             
           }else{//caso contrario retorna falso
             
-            logsys("HASH não foi registrado retornando FALSE");
             
             $ret = false;
             return $ret;
@@ -298,7 +291,6 @@ class CadUserCli{
         }
       
     }else{
-      logsys("E-mail MAL FORMATADO retornando 0");
       $ret = 0;//email nao informado retorna 0
       return $ret;
     }
@@ -370,7 +362,6 @@ class CadUserCli{
 
     if($hash!='')
     {
-      logsys("HASH recebido na metodo getUserByHash($hash)");
       
       //consulta validade do link HASH
       $sql = new Sql();
@@ -379,7 +370,6 @@ class CadUserCli{
                           DATE_ADD(dt_register, INTERVAL 1 HOUR) >= NOW() LIMIT 0,1',
                           array(':hash_recovery'=>$hash));
                           
-      logsys("Itens resultantes: ".count($res));
       
       //caso nada encontrado então ou o HASH é inválido ou o tempo limite expirou
       if(count($res)==0){
@@ -424,7 +414,6 @@ class CadUserCli{
   public function loginUser($user,$pwd){
     
     $pwdCr    = mkpwd($pwd);
-    logsys("Inciando rotina de login para user/pwd: $user / $pwd (  $pwdCr  )");
     
     
     
@@ -434,20 +423,15 @@ class CadUserCli{
                             AND pwd_usuario = :pwd_usuario',array(':email_usuario'=>$user,':pwd_usuario'=>$pwdCr));
                             
     if(!isSet($userData) || count($userData)==0){//CASO NADA RETORNADO
-        logsys("Opa!!! Nenhum usuario encontrado com as credenciais informadas");
         return false;
     }elseif(count($userData)>0){//CASO DADOS RETORNADOS CONFERE O STATUS
       
-      logsys("Localizado um usuario... prosseguindo para o login");
       if($userData[0]['status_usuario']==0){
           
-          logsys("uHhm Opa o usuario NAO possui cadastro CONFIRMADO e ATIVO... parando tudo...");
           return 0;//caso INATIVO entao retorna ZERO indicando cadastro NAO ATIVO
       
       }elseif($userData[0]['status_usuario']==1){//CASO USUARIO ATIVO GERA SESSION DO LOGIN
         
-          logsys("OK: Cadastro confirmado e Ativo!");
-          logsys("setando variaveis da sessao...");
           
           //permissao do cliente
           $_SESSION['_uL']    = encode($userData[0]['permissao_usuario']);
@@ -470,18 +454,15 @@ class CadUserCli{
   //metodo para realizar a ativacao do cadastro do usuario
   public function userCadConfirm($codConfirmacao=''){
     
-    logsys("Inciando confirm. e ativacao do cadastro para chave: $codConfirmacao");
 
     
     if($codConfirmacao==''){//se em branco retorna NULL (erro)
         
-        logsys("A chave ( $codConfirmacao ) foi considerada branca ou nula");
         
         return null;
     
     }else{//caso codigo informado procede com a conferencia e a ativacao
     
-      logsys("Buscando cadastros compativeis com a chave ( $codConfirmacao )");
     
     
       $sql = new Sql();
@@ -491,23 +472,19 @@ class CadUserCli{
       
       if(count($ativacao)==0){
         
-        logsys("Nenhum cadastro com a chave ( $codConfirmacao ) foi localizado");
       
         return null;//caso nada encontrado retorna NULL (deve pode ser um codigo invalido)
       
       }elseif(count($ativacao)>0){//caso codigo de confirmacao for OK entao ativa o cadastro
         
-        logsys("Foi localizado ".count($ativacao)." cadastro(s) para a chave: $codConfirmacao");
         
         //obtem o id do usuario
         $id_usuario = $ativacao[0]['id_usuario'];
         
-        logsys("ID do usuário a ser ativado ( $id_usuario )");
         
         //verifica se existe a necessidade de ativacao
         if($ativacao[0]['status_usuario']==1){//cadastro JA ATIVO basta notificar
           
-          logsys("O cadastro do usuario ( $id_usuario ) já estava ativo, apenas exibiremos a msg de confirmacao");
           return true;//retorna true confirmando que o cadastro esta atualizado 
           
         }elseif($ativacao[0]['status_usuario']==0){//CASO INATIVO ENTÃO PROCEDE COM A ATIVACAO
@@ -519,11 +496,9 @@ class CadUserCli{
                               
           if($res>0){//se o numero de linhas afetadas for maior que ZERO
             
-            logsys("Total de linhas afetadas: $res cadastro ATIVADO COM SUCESSO!");
             return true;//retorna true confirmando que o cadastro esta atualizado
             
           }else{
-            logsys("Total de linhas afetadas: $res o cadastro NÃO FOI ATIVADO COM SUCESSO!");
             return false;//caso nada encontrado retorna FALSE (pode ter ocorrido erro na atualizacao)
 
           }

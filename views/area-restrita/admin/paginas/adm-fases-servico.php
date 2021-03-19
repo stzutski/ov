@@ -18,13 +18,8 @@ if(!isSet($idServico)&&!isSet($idFase)&&!isSet($idEtapa)){
   include_once('views/area-restrita/admin/tab-list/lista-servicos-fases.php');
 
 }
-elseif(!isSet($idFase) && !isSet($idEtapa) && isSet($idServico) && $idServico!=''){//caso servico selecionado exibe fases do servico 
-
-  echo boxColapse();
-  echo reList($lista_srv_empresa);
-  echo '<hr />';
-  echo reList($_data_srv);
-  echo boxColapse('footer');
+//caso servico selecionado exibe fases do servico 
+elseif(!isSet($idFase) && !isSet($idEtapa) && isSet($idServico) && $idServico!=''){
 
   //include FORM PARA CADASTRO DE NOVA FASE para o servico selecionado
   //include_once('views/area-restrita/admin/forms/form-add-fase-servico.php');
@@ -36,7 +31,8 @@ elseif(!isSet($idFase) && !isSet($idEtapa) && isSet($idServico) && $idServico!='
   include_once('views/area-restrita/admin/tab-list/lista-fases-servico.php');
   
 }
-elseif(isSet($idFase)&&$idFase>0){//formulario para edicao de dados da fase do servico seleciona
+//SE ID FASE INFORMADO E MAIOR QUE ZERO carrega formulario para edicao da fase do servico selecionada
+elseif(isSet($idFase)&&$idFase>0){
 
   //include para FORMULARIO DE EDICAO da FASE SELECIONADA
   include_once('views/area-restrita/admin/forms/form-fase-servico.php');
@@ -48,5 +44,15 @@ elseif(isSet($idFase)&&$idFase>0){//formulario para edicao de dados da fase do s
   include_once('views/area-restrita/admin/tab-list/lista-estapas-fase.php');  
   
 }
+//SE ID ETAPA INFORMADO E MAIOR QUE ZERO carrega formulario para edicao da etapa da fase selecionada
+elseif(isSet($idEtapa)&&$idEtapa>0){
+
+
+  //include para FORMULARIO DE EDICAO da ETAPA SELECIONADA
+  include_once('views/area-restrita/admin/forms/form-etapa-fase.php');
+  
+  
+}
 
 ?>
+<h1>asd</h1>

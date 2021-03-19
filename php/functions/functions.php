@@ -4,6 +4,75 @@ spl_autoload_register(function ($class) {
     require_once(str_replace('\\', '/', "php/classes/$class.php"));
 });
 
+/*
+ * funcao para converter str decimal em float
+ * */
+function strToFloat($str){
+  $number = false;
+  $number = floatval(str_replace(',', '.', str_replace('.', '', $str)));
+  return $number;
+}
+
+/*
+ * funcao pre historica REFATORADA dbf(str1,array,str2);
+ * recebe 
+ * str1 a query a ser executada
+ * array() campos para o prepare do PDO
+ * str2 tipo de retorno esperado (fetch,num)
+ * */
+function dbf($query='',$args=array(),$ret=''){
+  $results=false;
+    if($query!=''){
+    $hostname = "localhost";
+    $username = "servidor";
+    $password = "Nv32125";
+    $dbname   = "obv";
+    try {
+        $conn     = new PDO("mysql:dbname=$dbname;host=$hostname",$username,$password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt     = $conn->prepare($query);
+        
+        //BINDPARAMS
+        if(is_array($args)&&count($args)>0){
+          foreach ($args as $key => &$value) {
+            $valor = $value;
+            $stmt->bindParam( $key , $value);
+          }
+        }
+        //EXECUTE QUERY
+        $stmt->execute();
+          if(strstr(strtoupper($query),'INSERT')){$results  = $conn->lastInsertId();}//ultimo ID inserido
+          if(strstr(strtoupper($query),'UPDATE')){$results  = $stmt->rowCount();}//ultimo ID inserido
+          if(strstr(strtoupper($query),'DELETE')){$results  = $stmt->rowCount();}//ultimo ID inserido
+          if($ret=='fetch'){$results  = $stmt->fetchAll(PDO::FETCH_ASSOC);}
+          if($ret=='num'){$results  = $stmt->rowCount();}//numero de linhas afetadas
+    } catch (PDOException $e) {
+    $results = 'ERROR:'.$e->getMessage();
+    }
+  }
+  return $results;
+}
+
+
+/*
+ * FUNCAO PARA RETORNAR ARRAY DE DADOS (DE UMA TABELA) PARA MONTAGEM DE CAMPOS SELECT
+ * recebe str=(nome da tabela), array de args(indice na tabela, nome coluna)
+ * */
+function mkSelFDB($res,$args=array()){
+  $result = array();
+  if(is_array($res)&&count($res)>0){
+    $idx = $args['indice'];
+    $col = $args['coluna'];
+    for ($i = 0; $i < count($res); $i++)
+    {
+      $data = $res[$i];
+      $a = $data[$idx];
+      $b = $data[$col];
+      $result[$a] = $b;
+    }
+  }
+  return $result;
+}
 
 
 /*
@@ -18,10 +87,8 @@ spl_autoload_register(function ($class) {
 function popform($dbSrc=array(),$dbIndex='',$postIndex=''){
   $res=false;
   if(!postVar($postIndex)){//caso "NAO SEJA POST" retorna dados do array de dados
-    logsys("Valor de DATA VAR::: ".dataVar($dbSrc,$dbIndex));
     if(dataVar($dbSrc,$dbIndex)!=''){$res = dataVar($dbSrc,$dbIndex);}else{$res = '0';}
   }else{//caso "SEJA POST" retorna dados do POST
-    logsys("Valor de POST VAR::: ".postVar($postIndex));
     if(postVar($postIndex)!=''){$res = postVar($postIndex);}else{$res = '0';}
   }
   return $res;
@@ -63,11 +130,11 @@ function reList($arr){
  * recebe str (header | footer) só para criar a tag
  * */
 if (!function_exists('boxColapse')) {
-  function boxColapse($opt='header'){
+  function boxColapse($opt='header',$btnText=''){
     $tag='';
     $rand = rand(0,255).date('His');
     if($opt=='header'){
-    $tag = '<button data-toggle="collapse" data-target="#col'.$rand.'" class="btn btn-warning btn-sm"><i class="fas fa-wrench"></i> DEV DATA</button>
+    $tag = '<button data-toggle="collapse" data-target="#col'.$rand.'" class="btn btn-warning btn-sm"><i class="fas fa-exclamation-triangle"></i>'.$btnText.'</button>
     <div id="col'.$rand.'" class="collapse">';
     }
     if($opt=='footer'){

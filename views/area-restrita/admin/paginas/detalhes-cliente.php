@@ -76,9 +76,6 @@ echo boxColapse('footer');
     Pedidos/Faturas
     </div>
     <div class="card-body iprof">
-    <?php 
-    logsys("TOTAIS DO CLIENTE: ".json_encode($_pedidosCli));
-    ?>
     <?php echo boxProfInfo('Pedidos',arrayVar($_pedidosCli,'totalDePedidos'));?>
     <?php echo boxProfInfo('Pago','R$ '.moeda(arrayVar($_pedidosCli,'totalRecebido')));?>
     <?php echo boxProfInfo('Em Aberto','R$ '.moeda(arrayVar($_pedidosCli,'totalEmAberto')));?>
@@ -96,7 +93,6 @@ echo boxColapse('footer');
       for ($i = 0; $i < count($_dependentesCli); $i++)
       {
         $_depData = $_dependentesCli[$i];
-        logsys("dependentes: ".json_encode($_depData));
         echo boxProfInfo('',naNd($_depData['nome_cliente']).' '.naNd($_depData['sobrenome_cliente']));
       }
     }else{
@@ -117,7 +113,6 @@ echo boxColapse('footer');
     <div class="card-body iprof">
       
     <?php 
-    logsys("Total de servicos contratados: ".json_encode($serv));
     for ($s = 0; $s < count($_servicosCli); $s++)
     {
       $iSrv = $_servicosCli[$s];
