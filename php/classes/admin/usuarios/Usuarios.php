@@ -89,6 +89,8 @@ class Usuarios extends ProcSql {
                         usuarios AS a, clientes AS b, tb_cidades AS c
                         WHERE a.id_usuario = b.id_usuario
                         AND b.cidade_cliente = c.id_cidade'.$query,array(':uid'=>$uid));
+                        
+    logsys("detalhes do retorno dos CLI/USER ($query)::: ". json_encode($res));
       return $res; 
     
     }else{
@@ -166,10 +168,10 @@ class Usuarios extends ProcSql {
       
       //lista os pedidos do usuario
       $lstPuser = $sql->select('SELECT * FROM pedidos WHERE id_usuario = :id_usuario',array(':id_usuario'=>$idUsuario));
-      
+      $groupIdItem=array();
       if(count($lstPuser)>0){
       
-        $groupIdItem=array();
+        
         //loop pedidos do usuario
         for ($p = 0; $p < count($lstPuser); $p++)
         {

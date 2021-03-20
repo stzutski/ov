@@ -31,9 +31,10 @@
     });
       
     //FORM DETALHES DO CLIENTE DO ADMIN
-    $app->get('/detalhes-cliente/:idcliente', function ($idcliente) {
+    $app->get('/detalhes-cliente', function () {
       App::chkPerm(decode( sessionVar('_uL') ),'admin');
-      $incBody = RESTRITA_ADMIN . 'paginas/detalhes-cliente.php';  
+      $incBody = RESTRITA_ADMIN . 'paginas/det-cli.php';  
+      //$incBody = RESTRITA_ADMIN . 'paginas/detalhes-cliente.php';  
       include ('php/models/admin/clientes.admin.model.php');  
       include 'views/admin.page.tpl.php';
     });

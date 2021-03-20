@@ -113,10 +113,12 @@ echo boxColapse('footer');
     <div class="card-body iprof">
       
     <?php 
-    for ($s = 0; $s < count($_servicosCli); $s++)
-    {
-      $iSrv = $_servicosCli[$s];
-      echo boxProfInfo($iSrv['nome_servico'],$iSrv['modalidade_servico']);
+    if(isSet($_servicosCli)&&is_array($_servicosCli)){
+      for ($s = 0; $s < count($_servicosCli); $s++)
+      {
+        $iSrv = $_servicosCli[$s];
+        echo boxProfInfo($iSrv['nome_servico'],$iSrv['modalidade_servico']);
+      }
     }
     ?>
     </div>

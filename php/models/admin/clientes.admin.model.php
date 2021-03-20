@@ -14,11 +14,15 @@ $_listaUsers = Usuarios::getListUserCli();
   
 }elseif(isSet($idcliente)&&$idcliente!=''){//CASO INFORMADO RECUPERA OS DADOS
   
+//$_dataUserCli = dbf('SELECT * FROM usuarios ')  
+  
+  
 $_dataUserCli     = Usuarios::getUserCli($idcliente);
 if(count($_dataUserCli)>0){$cli = $_dataUserCli[0];}
 
 $_dependentesCli  = Usuarios::getDependentes($_dataUserCli[0]['id_cliente']);
 $_enderecoCli     = Usuarios::getEndereco($_dataUserCli[0]['id_cliente']);
+
 if(count($_enderecoCli)>0){$end = $_enderecoCli[0];}
 
 $_pedidosCli     = Usuarios::getPedidos($_dataUserCli[0]['id_usuario']);

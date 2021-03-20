@@ -178,3 +178,17 @@ margin-left:30px;
  * */
 .liNativo{color:#940000;}
 .liAtivo{color:#333;}
+
+
+/*
+ * ficha detalhes do cliente
+ * */
+ 
+.rowDet{padding-top:3px;padding-bottom:3px;}
+.stripe-0{background:#fff;}
+.stripe-1{background:#f4f4f4;}
+.order-paid{color:#007bff;}
+.order-error{color:#B70415;}
+.order-unpaid{color:#CECECE;}
+.faklink{cursor:pointer;}
+.faklink:hover{color:#007bff;}

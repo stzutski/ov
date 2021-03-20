@@ -7,6 +7,7 @@ if($optF==1){?>
 <script src="assets/masks.js"></script>
 <script src="assets/jquery.dragndrop.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.rawgit.com/InventPartners/bootstrap-responsive-tabs/master/jquery.responsivetabs.js"></script>
 <script src="assets/scripts.js?rnd=<?php echo rand(0,255);?>"></script>
 <?php 
 }
@@ -31,6 +32,12 @@ if(sessionVar('_msg'))
 $(document).ready(function() {
     $('.dtTable').DataTable();
 } );
+
+
+$(function() {
+	$('.nav-tabs').responsiveTabs();
+});
+
 
 /*
 $(document).ready(function () {
