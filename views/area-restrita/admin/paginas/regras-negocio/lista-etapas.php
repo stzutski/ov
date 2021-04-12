@@ -40,7 +40,7 @@ $_data_listaEtapas = dbf('SELECT * FROM servicos_fases_etapas WHERE id_fase = :i
   {
 
   //echo alertBox('Clique e arraste para alterar a ordem. Clique em <i class="fas fa-pencil-alt"></i> para alterar.','info');
-  echo '<small><i class="fas fa-pencil-alt text-primary"></i>Edita serviço &nbsp;&nbsp;|&nbsp;&nbsp; <span style="color:#940000;"><i class="fas fa-square"></i> Inativo</span> - <span style="color:#333333;"><i class="fas fa-square"></i> Ativo</span></small>';
+  echo '<small><i class="fas fa-pencil-alt text-primary"></i>Edita etapa &nbsp;&nbsp;|&nbsp;&nbsp; <span style="color:#940000;"><i class="fas fa-square"></i> Inativo</span> - <span style="color:#333333;"><i class="fas fa-square"></i> Ativo</span></small>';
 
   $_tagLE  = '';
   $_tagLE .= '<ul class="list-group zorder" id="listaEtapas" data-table="etapasServ" data-url="'.URLAPP.'ajx" data-ids="'.$_idFaseSelecionada.'">'."\n";

@@ -16,11 +16,24 @@
       include_once 'views/cliente.page.tpl.php';
     });
   
+  
     $app->get('/categorias-servicos', function () {
 
       App::chkPerm(decode( sessionVar('_uL') ),'cliente');
             
       $incBody = RESTRITA_CLIENTE . 'paginas/categoria-servicos.php';
+      include_once ('php/models/cliente/servicos.cliente.model.php');    
+      include_once 'views/cliente.page.tpl.php';
+    });
+  
+    /*
+     * pagina onde o usuario configura o pedido ou seja::: onde informa as datas de nascimento e nomes
+     * */
+    $app->post('/configurar/pedido', function () {
+
+      App::chkPerm(decode( sessionVar('_uL') ),'cliente');
+            
+      $incBody = RESTRITA_CLIENTE . 'paginas/configurar-pedido.php';
       include_once ('php/models/cliente/servicos.cliente.model.php');    
       include_once 'views/cliente.page.tpl.php';
     });

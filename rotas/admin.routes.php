@@ -72,6 +72,14 @@
     });
 
 
+    //PAGINA PARA TESTES DIVERSOS
+    $app->get('/sandbox', function () {
+      App::chkPerm(decode( sessionVar('_uL') ),'admin');
+      $incBody = RESTRITA_ADMIN . 'paginas/sandbox.php';  
+      include ('php/models/admin/ficha.admin.model.php');  
+      include 'views/admin.page.tpl.php';
+    });
+
     //LISTA DAS CATEGORIAS DE SERVICOS DO ADMIN
     $app->get('/cat-servicos', function () {
       App::chkPerm(decode( sessionVar('_uL') ),'admin');

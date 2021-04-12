@@ -1,4 +1,7 @@
 <ul class="mainNav">
+  <?php echo mk_liMenu('<li><a href="{link}">{desc}</a></li>',$m_item_cli);?>
+  
+<!--
   <li><a href="">Dashboard</a></li>
   <li><a href="perfil-usuario">Meu Perfil</a></li>
   <li><a href="categorias-servicos">Cat. Serviços</a></li>
@@ -20,4 +23,5 @@
   </li>
   <li><a href="recuperar-acesso">Suporte Ticket</a></li>
   <li><a href="<?php echo URLAPP;?>?u=logout">LOGOUT</a></li>
+-->
 </ul>

@@ -13,6 +13,9 @@
     <div class="card-body">
      <div class="detcli">
 
+    <?php if(getVar('opt')=='' || getVar('opt')=='resumo'){?>
+
+
       <?php include_once(ADMINVIEWS.'paginas/detalhes-cliente/dados-cadastrais.php');?>
      <hr />
       <?php include_once(ADMINVIEWS.'paginas/detalhes-cliente/pedidos-e-faturas.php');?>
@@ -22,6 +25,19 @@
       <?php include_once(ADMINVIEWS.'paginas/detalhes-cliente/arquivos-recentes.php');?>
      <hr />
       <?php include_once(ADMINVIEWS.'paginas/detalhes-cliente/mensagens-recentes.php');?>
+        
+    <?php }else{
+    
+    $pg_detalhes = ADMINVIEWS.'paginas/detalhes-cliente/' . getVar('opt') . '-detcli.php';
+    
+    if(file_exists($pg_detalhes)){
+      //echo getVar('opt');
+      include_once($pg_detalhes);
+    }
+      
+    }
+    ?>
+        
         
      </div>
     </div>

@@ -1,7 +1,7 @@
         
     <div class="row stripe-1">
     <div class="col-md-12 rowDet">
-      <h5 class="faklink" data-toggle="collapse" data-target="#row_contratos"><i class="fas fa-business-time"></i> Contratos & Dependentes</h5>
+      <h5 class="faklink" data-toggle="collapse" data-target="#row_contratos"><i class="fas fa-business-time"></i> Processos & Dependentes</h5>
     </div>
     </div>   
     
@@ -52,14 +52,14 @@
                 if(!in_array($idITEM,$uidITEM)){
                   $dt_ITEM = perfilDetServico($idITEM);
                   echo '<div class="row stripe-'.$rcClass.'">'."\n";
-                  echo '<div class="col-md-6 rowDet"><b>'.$dt_ITEM['nome_servico'].'</b></div>'."\n";
+                  echo '<div class="col-md-6 rowDet"><b>'.$dt_ITEM['nome_servico'].'</b> ('.$dt_ITEM['modalidade_servico'].')'.'</div>'."\n";
                   $uidITEM[]=$idITEM;
                 }
                 if(!in_array($idUSER,$uidRESPONSAVEL)){
-                  echo '<div class="col-md-6 rowDet"><i class="fas fa-star" style="color:#FFDA00;"></i>'.$dtCLI['nome_cliente'].' '.$dtCLI['sobrenome_cliente'].'</div>'."\n";
+                  echo '<div class="col-md-6 rowDet"><i class="fas fa-star" style="color:#FFDA00;"></i><a href="#uid-cliente">'.$dtCLI['nome_cliente'].' '.$dtCLI['sobrenome_cliente'].'</a></div>'."\n";
                   $uidRESPONSAVEL[]=$idUSER;
                 }else{
-                  echo '<div class="col-md-6 rowDet">'.$dtCLI['nome_cliente'].' '.$dtCLI['sobrenome_cliente'].'</div>'."\n";
+                  echo '<div class="col-md-6 rowDet"><a href="#uid-cliente">'.$dtCLI['nome_cliente'].' '.$dtCLI['sobrenome_cliente'].'</a></div>'."\n";
                 }
                 
                 $lastItem = $dadosITEMPEDIDO['id_item'];

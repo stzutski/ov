@@ -3,12 +3,24 @@
 
 
 //ROTINAS DE EXCLUSAO DE REGISTROS
+if(postVar('do')=='newuser'){
+
+  $dataUCad = array();
+  $dataUCad['1'] = postVar('1');
+
+  
+  //REMOVER SERVICOS, FASES E ETAPAS
+  //include_once('php/models/admin/delete.admin.model.php');
+
+}
+
+//ROTINAS DE EXCLUSAO DE REGISTROS
 if(postVar('do')=='remove'){
 
   $id2Remove  = postVar('uid2remove');
   $tipoItem   = postVar('tipoItem');
   
-  //REMOVER ETAPA
+  //REMOVER SERVICOS, FASES E ETAPAS
   include_once('php/models/admin/delete.admin.model.php');
 
 }
@@ -35,6 +47,13 @@ if(postVar('do')=='lostpwd'){
   //~ include_once('php/models/site/login.site.model.php');
   
 //~ }
+
+if(postVar('do')=='configorder'){
+  
+  //model com as rotinas para gerar novos pedidos
+  include_once('php/models/cliente/pedidos.site.model.php');  
+  
+}
 
 if(postVar('do')=='saveorder'){
   

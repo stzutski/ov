@@ -106,6 +106,12 @@ function servOrf($tb1,$tb2,$idRow,$vaRow,$url,$textAlert='Registros órfãos'){
 
 echo servOrf('clientes',' servicos_categorias','id_servico','nome_servico','adm-servicos/servicos','Alguns serviços não possuem categoria, clique sobre o item para associá-lo a uma categoria');
 
+//botao clonar servico
+$btn_clonar = '';
+if(getVar('opt')=='edit-servico' && getVar('uids')!=''){
+$btn_clonar = '<button class="btn btn-default btn-clone" data-procurl="'.URLAPP.'ajx?ids='.getVar('uids').'"><i class="far fa-clone fa-xs"></i></button>';
+}
+
 if(!isSet($_btn_removeFooterForm)){$_btn_removeFooterForm='&nbsp;';}
-echo mkCard('footer','','<div class="card-footer text-muted">'.$_btn_removeFooterForm.'</div>');
+echo mkCard('footer','','<div class="card-footer text-muted">'.$btn_clonar.$_btn_removeFooterForm.'</div>');
 ?>

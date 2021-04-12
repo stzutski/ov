@@ -8,7 +8,7 @@ Após o cadastro enviamos uma mensagem para o usuário com um link de confirmaç
 Clique no link da mensagem para ativar o seu cadastro.<br /><br />
 <b>Ainda não recebeu?</b> <br /><br />
 Confira nas pastas: SPAM ou Propaganda... <br />
-as vezes ela aparece por lá ;)<br /><br />
+As vezes ela aparece por lá ;)<br /><br />
 Para receber um novo link de confirmação informe seu email no campo abaixo:
 </p>
 

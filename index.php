@@ -91,7 +91,13 @@ elseif(decode( sessionVar('_uL') ) == 'master' ){
 
   //CADASTRO :: FORMULARIO DE CADASTRO
   $app->get('/cadastro', function () {
-      include 'views/cadastro.page.php';
+    include 'views/cadastro.page.php';
+  });
+
+  //CADASTRO (submit) :: FORMULARIO DE CADASTRO
+  $app->post('/cadastro', function () use ($app) {
+    include_once('php/models/site/cadastro.site.model.php');
+    include 'views/cadastro.page.php';
   });
 
   //CADASTRO :: AVISO DE CONFIRMACAO NECESSARIA

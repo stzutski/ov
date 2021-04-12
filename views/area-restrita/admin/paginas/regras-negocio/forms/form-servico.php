@@ -58,6 +58,8 @@
   echo f_Text('Modalidade do Serviço','modServico','modServico',arrayVar($formV,'modServico'));
   echo f_Text('Descrição do Serviço','descServico','descServico',arrayVar($formV,'descServico'));
   echo f_Text('Preço do Serviço','precoServico','precoServico',arrayVar($formV,'precoServico'),'Ex: 1500,00',true, jsMask('valor'));
+  //f_select($label='',$id='',$name='',$opts=array(),$selected='',$req=false,$help='',$class='',$atts='')
+  echo f_select('Ficha de Cadastro','uidform','uidform',array('0'=>'18+','1'=>'até 17 anos','2'=>'até 13 anos'),arrayVar($formV,'uidserv'),true,'Formulário da ficha de cadastro');
   echo f_select('Status','statusServ','statusServ',array('0'=>'INATIVO','1'=>'ATIVO'),arrayVar($formV,'statusServ'),'status_servico','statusServ');
   echo f_hidden('bkt','adm-servicos/servicos?uidcs=');
   echo f_hidden('uid',getVar('uids'));
@@ -65,6 +67,8 @@
   echo f_btn('btn','Salvar Dados','back');
   echo '</fieldset>'."\n";  
   echo '</form>'."\n";
+  
+  
   
   //echo mkCard('footer');
   // final do card  

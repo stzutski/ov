@@ -1,14 +1,16 @@
 <?php 
 $optF=1;
 if($optF==1){?>
-<script src="assets/jquery-3.5.1.min.js"></script>
-<script src="assets/bootstrap.bundle.min.js"></script>
+<script src="assets/jquery-3.5.1.min.js"></script>  
+<script src="assets/bootstrap4/js/bootstrap.min.js"></script>
 <script src="assets/alertify.min.js"></script>
 <script src="assets/masks.js"></script>
 <script src="assets/jquery.dragndrop.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.rawgit.com/InventPartners/bootstrap-responsive-tabs/master/jquery.responsivetabs.js"></script>
+<script src="assets/flyedit.js"></script>
 <script src="assets/scripts.js?rnd=<?php echo rand(0,255);?>"></script>
+
 <?php 
 }
 else
@@ -19,7 +21,11 @@ else
 <script src="assets/alertify.min.js"></script>
 <script src="assets/masks.js"></script>
 <script src="assets/jquery.dragndrop.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>  
+
+
   
 <?php }?>
 <script>

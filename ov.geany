@@ -27,16 +27,7 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=8
-FILE_NAME_0=5747;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Frotas%2Fadmin.routes.php;0;2
-FILE_NAME_1=115;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fpaginas%2Flista-clientes.php;0;2
-FILE_NAME_2=483;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Finclude-html%2Fheaders%2Fadmin-header.php;0;2
-FILE_NAME_3=135;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fpaginas%2Fservicos-fases.php;0;2
-FILE_NAME_4=2364;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fphp%2Fmodels%2Fadmin%2Fservicos-fases.admin.model.php;0;2
-FILE_NAME_5=0;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fpaginas%2Fadm-servicos.php;0;2
-FILE_NAME_6=38;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Fov%2Fviews%2Farea-restrita%2Fadmin%2Fpaginas%2Fregras-negocio%2Flista-modelo.php;0;2
-FILE_NAME_7=420;PHP;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Ftools%2Fstep.php;0;2
-FILE_NAME_8=138;CSS;0;EUTF-8;0;1;0;%2Fvar%2Fwww%2Fhtml%2Flabs%2Ftools%2Fsteps.css;0;2
+current_page=0
 
 [VTE]
 last_dir=/home/robertors

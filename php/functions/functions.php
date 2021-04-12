@@ -4,6 +4,91 @@ spl_autoload_register(function ($class) {
     require_once(str_replace('\\', '/', "php/classes/$class.php"));
 });
 
+
+
+/*
+ * funcao para retornar os dados do servico selecionado
+ * */
+function getDataService($idServico='',$idEmpresa='1'){
+  if($idServico!='' && $idEmpresa!=''){
+  $resServs = dbf('SELECT * FROM servicos WHERE id_servico = :id_servico AND id_empresa = :id_empresa',
+                  array(':id_servico'=>$idServico,':id_empresa'=>$idEmpresa),'fetch');
+    if(is_array($resServs) && count($resServs)>0){
+      return $resServs;
+    }else{
+      return false;
+    }
+  }else{
+    return false;  
+  }
+}    
+
+
+/*
+ * funcao para cadastrar usuario e clientes (CADASTRO INICIAL)
+ * */
+function add_newUserCli($args=array()){
+
+  $sts_cad  = false;
+  
+  $resUsr   = dbf('INSERT INTO usuarios 
+                  (id_empresa,nome_usuario,sobrenome_usuario,email_usuario,telefone_usuario,pwd_usuario,permissao_usuario,dt_usuario,cod_ativacao_usuario,status_usuario)
+                  VALUES 
+                  (:id_empresa,:nome_usuario,:sobrenome_usuario,:email_usuario,:telefone_usuario,:pwd_usuario,:permissao_usuario,:dt_usuario,:cod_ativacao_usuario,:status_usuario)',
+                  array(
+                  ':id_empresa'           => $args['id_empresa'],
+                  ':nome_usuario'         => $args['nome'],
+                  ':sobrenome_usuario'    => $args['sobrenome'],
+                  ':email_usuario'        => $args['email'],
+                  ':telefone_usuario'     => $args['telefone'],
+                  ':pwd_usuario'          => $args['senha'],
+                  ':permissao_usuario'    => 'cliente',
+                  ':dt_usuario'           => $args['dt_cad'],
+                  ':cod_ativacao_usuario' => $args['cod_ativacao'],
+                  ':status_usuario'       => $args['status']));
+  
+  if($resUsr>0){
+    $id_usuario = $resUsr;
+
+    $resCli     = dbf('INSERT INTO clientes
+                      (id_usuario,id_empresa,nome_cliente,sobrenome_cliente,cpf_cliente,uf_cliente,cidade_cliente,dt_cliente,status_cliente)
+                      VALUES
+                      (:id_usuario,:id_empresa,:nome_cliente,:sobrenome_cliente,:cpf_cliente,:uf_cliente,:cidade_cliente,:dt_cliente,:status_cliente)',
+                      array(':id_usuario'         => $id_usuario,
+                            ':id_empresa'         => $args['id_empresa'],
+                            ':nome_cliente'       => $args['nome'],
+                            ':sobrenome_cliente'  => $args['sobrenome'],
+                            ':cpf_cliente'        => $args['cpf'],
+                            ':uf_cliente'         => $args['uf'],
+                            ':cidade_cliente'     => $args['cidade'],
+                            ':dt_cliente'         => $args['dt_cad'],
+                            ':status_cliente'     => $args['status']));
+    
+    
+      if($resCli>0)
+      {
+        $sts_cad = $id_usuario; //caso cadastro positivo retorna o ID do usuario recem cadastrado
+        $msg_cad = "Cadastrado com sucesso";
+      }
+      else
+      {
+        //caso cadastro do cliente tenha falhado entao remove usuario recem cadastrado e assinala o erro
+        $remUsr = dbf('DELETE FROM usuarios WHERE id_usuario = :id_usuario AND id_empresa = :id_empresa',
+                      array(':id_usuario'=>$id_usuario,':id_empresa'=>$args['id_empresa']));
+                      
+        $sts_cad = false; //caso erro no cadastro retorna FALSE
+        $msg_cad = "Ocorreu um erro durante o cadastro\n tente novamente mais tarde!";
+      }
+  }
+  else
+  {
+    $sts_cad = false; //caso erro no cadastro retorna FALSE
+  }
+  
+  return $sts_cad;
+}
+
+
 /*
  * funcao para converter str decimal em float
  * */
@@ -324,6 +409,10 @@ function decode($str,$seed='app/obavisto'){
   return $open;
 }
 
+//Funcao para gerar codigo de ativacao do usuario
+function userCodeActiv($str){
+  return md5(encode($str));
+}
 
 //funcao para conferencia de um CPF
 function validaCPF($cpf = null) {

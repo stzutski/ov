@@ -6,6 +6,7 @@
   <li>
     <ul class="list-group">
       <li class="list-group-item indent-20"><h5><b>CONFIRMAR</b></h5></li>
+      <li class="list-group-item"><a href="sandbox">Sandbox</a></li>
       <li class="list-group-item"><a href="cat-servicos">Cat. Servicos</a></li>
       <li class="list-group-item">[<a href="adm-fases-servico">Fases do Serviço</a>]</li>
       <li class="indent-20"><a href="configurar-servicos">Etapas da Fase</a></li>

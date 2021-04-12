@@ -28,8 +28,6 @@ if(isSet($codigoConfirmacao) && $codigoConfirmacao!=''){
   if(isSet($status_cadastro) && $status_cadastro=='1'){//cadastro CONFIRMADO COM SUCESSO
   include 'views/site/rotinas-cadastro/cadastro.cadastro-confirmado.page.php';  
   }
-
-
 }
 
 ?>  

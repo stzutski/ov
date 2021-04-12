@@ -1,0 +1,127 @@
+/*
+ * editable CSS
+ * */
+
+.flyfd{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dashed black;
+}
+
+.flyfd:hover{
+text-decoration:none;
+}
+.spFly{display:inline-block;margin-bottom: -10px;}
+
+
+/*
+.spFly {
+    display: inline-block;
+    margin-bottom: -10px;
+    position: absolute;
+    background: #fff;
+    z-index: 101;
+    min-width: 240px;
+    border: 1px #ccc solid;
+    padding: 10px;
+    bottom: 20px;
+    left: 25%;
+    border-radius:8px;
+}
+*/
+
+
+.spFlyfield{display: inline;float:left;max-width: 60%;border: 0px #ccc solid;}
+
+
+.spFlyfield > * { max-width:100%;}
+
+.flytext { 
+padding:0px 5px;
+border: 1px solid #007bff!important;
+-webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.45)!important;
+-moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.45)!important;
+/*
+box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.45) !important;
+*/
+transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s!important;
+border-radius: 4px;
+}
+
+.flytextarea { 
+padding:0px 5px;
+border: 1px solid #f4f4f4!important;
+-webkit-box-shadow: 2px 1px 4px 0px rgba(0,0,0,0.45)!important;
+-moz-box-shadow: 2px 1px 4px 0px rgba(0,0,0,0.45)!important;
+box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.45) !important;
+transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s!important;
+border-radius: 4px;
+}
+
+.flyselect { 
+border: 1px solid #007bff!important;
+-webkit-box-shadow: 2px 1px 4px 0px rgba(0,0,0,0.45)!important;
+-moz-box-shadow: 2px 1px 4px 0px rgba(0,0,0,0.45)!important;
+box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.45) !important;
+transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s!important;
+border-radius: 4px;
+height: 30px;
+background: #fff;
+min-width: 100px;
+border-radius: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+::selection {
+  color: #fff;
+  background: #679AFF;
+}
+
+/*
+.spFlyfield {
+    display: inline;
+    float: left;
+    
+}
+.spFlyfield > select{
+  max-width: 100%;
+}
+*/
+
+
+
+.spFlyfield-btn{display: inline;float:left;}
+
+
+/*
+.spFlyfield-btn {
+    display: block;
+    float: right;
+    min-width: 60px;
+    max-width: 50%;
+    border: 1px #333 solid;
+    text-align: right;
+}
+*/
+
+
+
+
+.btn-fly-ok{border:0px #ccc solid!important;border-radius:4px;}
+.btn-fly-cancel{border:1px #ccc solid!important;border-radius:4px;}
+
+
+.cfield{}
+
+.btn-group-xs > .btn, .btn-xs {
+  padding: .25rem .4rem;
+  font-size: .875rem;
+  line-height: .5;
+  border-radius: .2rem;
+}

@@ -20,6 +20,21 @@ if(postVar('do')=='reorder' || postVar('go')=='reorder'){
   include_once('php/models/admin/reorder.admin.model.php');  
 }
 
+//rotina para clonar servicos > fases > etapas
+if(postVar('do')=='cloneserv' || postVar('go')=='cloneserv'){
+  include_once('php/models/admin/cloneserv.admin.model.php');
+}
+
+//rotina para clonar servicos > fases > etapas
+if(postVar('do')=='ficha' || postVar('go')=='ficha'){
+  include_once('php/models/admin/ficha.admin.model.php');
+}
+
+//rotina retornar CIDADES DE UM ESTADO(UF)
+if(postVar('do')=='lstcidades' || postVar('go')=='lstcidades'){
+  include_once('php/models/site/cadastro.site.model.php');
+}
+
 
 
 $tipo='';

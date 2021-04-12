@@ -6,15 +6,40 @@
 
 
 
+form.register{
+display:block;
+max-width: 300px;
+margin:0px auto;
+text-align:center;
+}
+
+form#cnfPed{
+display:block;
+max-width: 300px;
+margin:0px auto;
+text-align:center;
+}
+/*
 form{
 display:block;
 max-width: 300px;
 margin:0px auto;
 text-align:center;
 }
+*/
+
 ul.mainNav li{
 line-height:30px;
 list-style:none;
+}
+
+
+.editable-buttons > button{
+border:1px #ccc solid;
+padding: .25rem .5rem;
+font-size: .875rem;
+line-height: 1.5;
+border-radius: .2rem;
 }
 
 
@@ -113,7 +138,11 @@ margin-left:20px!important;
 
 
 
+/*
 .nav-item a{color:#495057!important;}
+*/
+.nav-item a{color:#fff!important;}
+.nav-tabs a{color:#000!important;}
 
 
 /*espacamento boxes pagina detalhes do cliente*/
@@ -192,3 +221,65 @@ margin-left:30px;
 .order-unpaid{color:#CECECE;}
 .faklink{cursor:pointer;}
 .faklink:hover{color:#007bff;}
+
+
+/*
+ * line row ficha cliente
+ * */
+.row-ficha{border-bottom:1px #ccc dashed;padding-bottom:10px;margin-bottom:5px;}
+.row-subheader-ficha{
+background:#f4f4f4;
+font-size:14pt;
+font-weight:bold;
+/*
+text-align:center;
+*/
+padding-bottom:0px!important;
+margin-bottom:-5px;}
+
+.form-ficha > .row{line-height:30px;}
+.form-ficha small{
+line-height: 20px;
+text-align: center !important;
+display: inline-block;
+color: #880b0b;
+}
+
+.form-ficha > .row > div{
+border-bottom:1px #ccc dashed;padding-bottom:10px;margin-bottom:5px;
+}
+
+/*
+ * balao flutuante percentual form
+ * */
+.fpercent{
+  width:50px;
+  height:50px;
+  line-height:50px;
+  float:right;
+  position:fixed;
+  right:0;
+  top:50%;
+  z-index:102;
+  background:#FFF8A1;
+  text-align:center;
+  color:#000;
+  border:1px #C3C3C3 solid;
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.45) !important;
+  font-weight:bold;
+}
+
+
+
+/*
+ * estilos form configurar pedido
+ * */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+legend {
+  padding: 0px 5px;
+  width:auto;
+}

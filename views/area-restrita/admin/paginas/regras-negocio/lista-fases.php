@@ -67,7 +67,7 @@ else
   {
 
   //echo alertBox('Clique e arraste para alterar a ordem, clique em <i class="fas fa-stream"></i> para as suas etapas da fase. Clique em <i class="fas fa-pencil-alt"></i> para alterar.','info');
-  echo '<small><i class="fas fa-stream text-primary"></i> Visualiza Fases &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-pencil-alt text-primary"></i> Edita serviço &nbsp;&nbsp;|&nbsp;&nbsp; <span style="color:#940000;"><i class="fas fa-square"></i> Inativo</span> - <span style="color:#333333;"><i class="fas fa-square"></i> Ativo</span></small>';
+  echo '<small><i class="fas fa-stream text-primary"></i> Visualiza Etapas &nbsp;&nbsp;|&nbsp;&nbsp; <i class="fas fa-pencil-alt text-primary"></i> Edita serviço &nbsp;&nbsp;|&nbsp;&nbsp; <span style="color:#940000;"><i class="fas fa-square"></i> Inativo</span> - <span style="color:#333333;"><i class="fas fa-square"></i> Ativo</span></small>';
   
   $_dUteis=0;
   $_tagLF  = '';

@@ -2,6 +2,147 @@
 
 
 /*
+ * funcao para gerar janelas modal popup
+ * */
+
+function modalPop($args=array()){
+    $tag    = '';
+    $opt    = arrayVar($args,'opt');
+    $id     = arrayVar($args,'id');
+    $title  = arrayVar($args,'title');
+    $btn    = arrayVar($args,'btn');
+    
+    if($id!='' && $opt=='header'){
+        $tag .= '<div class="modal fade" id="'.$id.'" tabindex="-1" aria-labelledby="modalLabel" role="dialog" aria-hidden="true">';
+        $tag .= '<div class="modal-dialog" role="document">';
+        $tag .= '<div class="modal-content">';
+        $tag .= '<div class="modal-header">';
+        $tag .= '<h3 class="modal-title" id="modalLabel">'.$title.'</h3>';
+        $tag .= '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
+        $tag .= '<span aria-hidden="true">&times;</span>';
+        $tag .= '</button>';
+        $tag .= '</div>';
+        $tag .= '<div class="modal-body">'."\n";
+    }
+  
+    if($opt=='footer'){
+        $tag .= '</div>';
+        $tag .= '<div class="modal-footer">';
+        $tag .= '<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>';
+        $tag .= $btn;
+        $tag .= '</div>';
+        $tag .= '</div>';
+        $tag .= '</div>';
+        $tag .= '</div>'."\n";
+    }
+  
+    return $tag;
+}  
+
+/*
+ * funcao para gerar LI menus 
+ * recebe template STR e array de dados
+ * */
+
+function mk_liMenu($template='',$itens=array()){
+  $tag='';
+  if($template!='' && count($itens)>0){
+    for ($i = 0; $i < count($itens); $i++)
+    {
+      $ld   = $itens[$i];
+      $a    = explode('|',$ld);
+      $t    = $template;
+      $t    = str_replace('{link}',$a[0],$t);
+      $t    = str_replace('{desc}',$a[1],$t);
+      $tag .= $t."\n";
+    }
+  }
+  return $tag;
+}
+
+/*
+ * funcao para calcular qual o percentual da ficha ja foi preenchido
+ * recebe 
+ * $arr(array com dados já cadastrados) 
+ * e 
+ * $nQuest (int) total de questoes do formulario
+ * Calcula a razao e retorna a porcentagem de dados submetidos
+ * */
+function calcFichaPercent($arr=array(),$nQuest='151'){
+  $percentual=0;
+  $tot=0;
+  if(is_array($arr) && count($arr)>0){
+  foreach ($arr as $key => $value) {
+    if($value!='vazio'&&$value!='00/00/0000'&&$value!=''){
+    $tot++;  
+    }      
+  }  
+  $razao      = 100 / $nQuest;
+  $percentual = round($tot * $razao);
+  }
+  else
+  {
+    $percentual=0;
+  }
+  return $percentual;
+} 
+
+/*
+ * funcao para popular campos da ficha de cadastro
+ * recebe
+ * arrayAssociativo, chave (indice do array), valor padrao
+ * se array(chave) existe retorna valor 
+ * caso contrario retorna $def (valor default)
+ * ex de uso:
+ * $a = $arrayDados;
+ * echo cFi($a,'c001','@usuario')
+ * */
+function cFi($arrayData=array(),$key='',$def=''){
+  $value='';
+  
+  if(arrayVar($arrayData,$key)==''){
+    $value = $def;
+  }else{
+    $value = arrayVar($arrayData,$key);
+  }
+  
+  return $value;
+}
+
+
+/*
+ * funcao para gerar tags de edicao inline para campos da ficha de cadastro
+ * */
+function __fly($args){
+  $type = arrayVar($args,'type');
+  $mask = arrayVar($args,'type');
+  $opts = arrayVar($args,'opts');
+  $max  = arrayVar($args,'max');
+  $burl = URLAPP;
+  $tag  = '';
+  if($opts!=''){
+    $opts = ' data-opts="'.$opts.'" ';
+    //$opts = str_replace('" ','"',$opts);
+  }
+  if( $mask!='' ){
+    $mask = ' data-mask="'.arrayVar($args,'mask').'" ';
+  }
+  if( $max!='' ){
+    $max = ' data-max="'.arrayVar($args,'max').'" ';
+  }
+  if( $burl!='' ){
+    $burl = ' data-url="'.$burl.'" ';
+  }
+
+  if($type!=''){
+  $tag  .=  '<a href="#" id="'.arrayVar($args,'id').'" data-pk="'.arrayVar($args,'id').'" data-type="'.arrayVar($args,'type').'" '.$opts.$mask.$max.$burl.' style="display:inline;">'.arrayVar($args,'value').'</a>';
+  }
+  return $tag;
+}
+
+
+
+/*
  * funcao para gerar campos select JUMP to recebe array com dados
   $args['data']; //data fetch mysql
   $args['idOption']; //coluna id na tabela
@@ -586,7 +727,7 @@ function selselr($a='',$b=''){
 /*
  * funcao para retornar select de paises ou o pais selecionado
  * */
-function listaPais($cod='',$select=false){
+function listaPais($cod='',$select=false,$selected=''){
 
     $_pais['AFG'] = "Afghanistan";
     $_pais['ALB'] = "Albania";
@@ -818,14 +959,12 @@ function listaPais($cod='',$select=false){
     $_pais['ZWE'] = "Zimbabwe";
 
     $tag='';
-    $selected='';
 
     if($select==true){
       foreach ($_pais as $key => $value) {
-        if($cod!=''){
-          if($cod==$key){$selected='selected ';}else{$selected='';}
-        }
-        $tag .= "<option ${selected}value=\"$key\">$value</option>\n";
+        $att          = '';//atributo selected
+        if($selected!=''){if($key==strtoupper($selected)){$att = ' selected';}}         
+        $tag .= "<option value=\"$key\"$att>$value</option>\n";
       }  
       return $tag;
     }
@@ -843,9 +982,51 @@ function listaPais($cod='',$select=false){
 
 
 /*
+ * funcao para retornar lista de cidades de acordo com o estado
+ * pode tanto retornar array puro com a lista ou retornar um
+ * opts para um campo select
+ * */
+function listaCidades($cod='',$select=false,$selected=''){
+  if($cod=='')
+  {
+  return false;  
+  }
+  else
+  {
+    $cod = strtoupper($cod);
+    
+    $res = dbf('SELECT id_cidade,nome_cidade FROM tb_cidades WHERE uf = :uf',array(':uf'=>$cod),'fetch');
+    if(is_array($res)&&count($res)>0)
+    {
+      if($select==false)
+      {
+        return $res;
+      }
+      else
+      {
+        $opts='';
+        for ($i = 0; $i < count($res); $i++)
+        {
+          $data         = $res[$i];
+          $id_cidade    = $data['id_cidade'];
+          $nome_cidade  = $data['nome_cidade'];
+          $att          = '';//atributo selected
+          if($selected!=''){if($id_cidade==$selected){$att = ' selected';}}
+          $opts .= "<option value=\"$id_cidade\"$att>$nome_cidade</option>";
+        }
+        
+        return $opts;
+      }
+    }
+  }
+}
+
+
+
+/*
  * funcao para retornar a lista de estados(UFs) ou o estado selecionado
  * */
-function listaUF($cod='',$select=false){
+function listaUF($cod='',$select=false,$selected=''){
 
   $_UF["AC"] = "Acre";
   $_UF["AL"] = "Alagoas";
@@ -876,14 +1057,12 @@ function listaUF($cod='',$select=false){
   $_UF["TO"] = "Tocantins";  
   
     $tag='';
-    $selected='';
 
     if($select==true){
       foreach ($_UF as $key => $value) {
-        if($cod!=''){
-          if(strtoupper($cod)==$key){$selected='selected ';}else{$selected='';}
-        }
-        $tag .= "<option ${selected}value=\"$key\">$value</option>\n";
+        $att          = '';//atributo selected
+        if($selected!=''){if($key==strtoupper($selected)){$att = ' selected';}}        
+        $tag .= "<option value=\"$key\"$att>$value</option>\n";
       }  
       return $tag;
     }
